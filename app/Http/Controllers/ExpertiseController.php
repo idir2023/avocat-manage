@@ -12,7 +12,8 @@ class ExpertiseController extends Controller
      */
     public function index()
     {
-        //
+        $expertises = Expertise::all();
+        return view('admins.expertises.index', compact('expertises'));
     }
 
     /**

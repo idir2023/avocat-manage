@@ -122,7 +122,7 @@
                                         </div>
                                     @empty
                                         <tr>
-                                            <td colspan="5" class="text-center">No messages found.</td>
+                                            <td colspan="6" class="text-center">No messages found.</td>
                                         </tr>
                                     @endforelse
                                 </tbody>

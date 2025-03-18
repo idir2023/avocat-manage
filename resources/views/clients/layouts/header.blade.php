@@ -1,3 +1,6 @@
+<?php
+$settings = \App\Models\Parametre::first();
+?>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 bg-secondary d-none d-lg-block">
@@ -10,30 +13,28 @@
                 <div class="col-lg-7 text-left">
                     <div class="h-100 d-inline-flex align-items-center py-2 px-3">
                         <i class="fa fa-envelope text-primary mr-2"></i>
-                        <small>info@example.com</small>
+                        <small>{{ $settings->email ?? 'info@example.com' }}</small>
                     </div>
                     <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                         <i class="fa fa-phone-alt text-primary mr-2"></i>
-                        <small>+012 345 6789</small>
+                        <small>{{ $settings->telephone ?? '+012 345 6789' }}</small>
                     </div>
                 </div>
                 <div class="col-lg-5 text-right">
                     <div class="d-inline-flex align-items-center p-2">
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->facebook ?? '#' }}">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->twitter ?? '#' }}">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->linkedin ?? '#' }}">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->instagram ?? '#' }}">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                        
                     </div>
                 </div>
             </div>
