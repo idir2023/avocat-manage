@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\ExpertiseController;
+use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\AdminController;
  
 
 Route::get('/', [ClientController::class, 'home'])->name('home');
@@ -17,15 +22,17 @@ Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
 Route::post('/contact', [ClientController::class, 'store'])->name('contact.store');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admins.index');
-    })->name('dashboard');
+    // Dashboard route
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
-Route::resource('settings', SettingController::class);
-Route::resource('contacts', ContactController::class);
-
-
+    // Resource routes for each entity, with the correct controllers
+    Route::resource('parametres', ParametreController::class);
+    Route::resource('consultations', ConsultationController::class);   
+    Route::resource('expertises', ExpertiseController::class);   
+    Route::resource('actualites', ActualiteController::class);   
+    Route::resource('contacts', ContactController::class);
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

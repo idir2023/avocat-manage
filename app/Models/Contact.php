@@ -11,9 +11,10 @@ class Contact extends Model
 
     // Define the fillable fields
     protected $fillable = [
-        'name',
+        'nom',
+        'prenom',
+        'telephone',
         'email',
-        'subject',
-        'message',
+         'message',
     ];
 }

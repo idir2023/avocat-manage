@@ -31,26 +31,29 @@ class ClientController extends Controller
     {
         return view('clients.contact');
     }
+ 
     public function store(Request $request)
 {
-    // Validate the form data
+    // Validate form data
     $request->validate([
         'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-        'subject' => 'required|string|max:255',
-        'message' => 'required|string',
+        'prenom' => 'required|string|max:255',
+        'email' => 'required|email',
+        'phone' => 'nullable|string|max:50',
+         'message' => 'required|string',
     ]);
 
-    // Create a new contact record
-    Contact::create([
-        'name' => $request->name,
-        'email' => $request->email,
-        'subject' => $request->subject,
-        'message' => $request->message,
+    // Store the contact message in the database
+    \App\Models\Contact::create([
+        'nom' => $request->input('name'),
+        'prenom' => $request->input('prenom'),
+        'telephone' => $request->input('phone'),
+        'email' => $request->input('email'),
+        'message' => $request->input('message'),
     ]);
 
-    // Redirect to a named route 'contact.form' with success message
-    return redirect()->route('contact')->with('success', 'Your message has been sent!');
+    // Redirect back with success message
+    return redirect()->back()->with('success', 'Your message has been sent successfully!');
 }
-   
+
 }

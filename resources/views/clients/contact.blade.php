@@ -42,65 +42,63 @@
                 <h1 class="mb-4">Contact For Any Query</h1>
             </div>
             <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="col-lg-12 mb-5 mb-lg-0">
                     <div class="contact-form">
                         <!-- Display success message -->
                         @if (session('success'))
-                        <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{ session('success') }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    @endif
-                    
-                     
+                            <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
+    
                         <!-- Form to submit contact info -->
                         <form action="{{ route('contact.store') }}" method="POST" name="sentMessage">
                             @csrf
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" id="name" name="name"
-                                        placeholder="Your Name" required="required"
-                                        data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control p-4" id="name" name="name" 
+                                           placeholder="Your Name" required="required"
+                                           data-validation-required-message="Please enter your name" aria-label="Your Name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" id="email" name="email"
-                                        placeholder="Your Email" required="required"
-                                        data-validation-required-message="Please enter your email" />
+                                    <input type="text" class="form-control p-4" id="prenom" name="prenom" 
+                                           placeholder="Your Prenom" required="required"
+                                           data-validation-required-message="Please enter your prenom" aria-label="Your Prenom" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="col-sm-6 control-group">
+                                    <input type="email" class="form-control p-4" id="email" name="email" 
+                                           placeholder="Your Email" required="required"
+                                           data-validation-required-message="Please enter your email" aria-label="Your Email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="col-sm-6 control-group">
+                                    <input type="tel" class="form-control p-4" id="phone" name="phone" 
+                                           placeholder="Your Phone" required="required"
+                                           data-validation-required-message="Please enter your phone" aria-label="Your Phone" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" name="subject"
-                                    placeholder="Subject" required="required"
-                                    data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message" name="message" placeholder="Message"
-                                    required="required" data-validation-required-message="Please enter your message"></textarea>
+                             <div class="control-group">
+                                <textarea class="form-control p-4" rows="6" id="message" name="message" 
+                                          placeholder="Message" required="required" 
+                                          data-validation-required-message="Please enter your message" aria-label="Message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send
-                                    Message</button>
+                                <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send Message</button>
                             </div>
                         </form>
-                    </div>
-                </div>
-                <div class="col-lg-6" style="min-height: 400px;">
-                    <div class="position-relative h-100 rounded overflow-hidden">
-                        <iframe style="width: 100%; height: 100%; object-fit: cover;"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Contact End -->
 
 

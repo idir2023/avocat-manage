@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('consultations', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name');
-            $table->string('logo')->nullable();
+            $table->string('nom');
+            $table->string('prenom');
             $table->string('email');
-            $table->text('address');
-            $table->string('phone_number')->nullable();
-            $table->string('website')->nullable();
-            $table->json('social_media')->nullable();
+            $table->string('telephone', 50)->nullable();
+            $table->text('probleme');
+            $table->string('fichier')->nullable(); // Stocker le fichier uploadé
+            $table->enum('paiement_status', ['en attente', 'payé'])->default('en attente');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('consultations');
     }
 };
