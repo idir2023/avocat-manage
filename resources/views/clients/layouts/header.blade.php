@@ -9,7 +9,7 @@ $settings = \App\Models\Parametre::first();
             </a>
         </div>
         <div class="col-lg-9">
-            <div class="row bg-white border-bottom d-none d-lg-flex">
+            {{-- <div class="row bg-white border-bottom d-none d-lg-flex">
                 <div class="col-lg-7 text-left">
                     <div class="h-100 d-inline-flex align-items-center py-2 px-3">
                         <i class="fa fa-envelope text-primary mr-2"></i>
@@ -37,7 +37,7 @@ $settings = \App\Models\Parametre::first();
                         
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                 <a href="{{route('home')}}" class="navbar-brand d-block d-lg-none">
                     <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
@@ -49,8 +49,8 @@ $settings = \App\Models\Parametre::first();
                     <div class="navbar-nav mr-auto py-0">
                         <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
                         <a href="{{route('about')}}" class="nav-item nav-link">About</a>
-                        <a href="{{route('services')}}" class="nav-item nav-link">Practice</a>
-                        <a href="{{route('team')}}" class="nav-item nav-link">Attorneys</a>
+                        <a href="{{route('actualite')}}" class="nav-item nav-link">Actualite</a>
+                        <a href="{{route('expertise')}}" class="nav-item nav-link">Our Expertise</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                             <div class="dropdown-menu rounded-0 m-0">

@@ -21,13 +21,12 @@ use App\Http\Controllers\LanguageController;
 // Routes publiques
 Route::get('/', [ClientController::class, 'home'])->name('home');
 Route::get('/about', [ClientController::class, 'About'])->name('about');
-Route::get('/services', [ClientController::class, 'Services'])->name('services');
-Route::get('/portfolio', [ClientController::class, 'Portfolio'])->name('portfolio');
-Route::get('/team', [ClientController::class, 'Team'])->name('team');
+Route::get('/actualite', [ClientController::class, 'actualite'])->name('actualite');
+Route::get('/expertise', [ClientController::class, 'expertise'])->name('expertise');
 
 // Route pour le formulaire de contact
 Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
-Route::post('/contact', [ClientController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ClientController::class, 'storeContact'])->name('contact.store');
 
 // Routes protégées (authentification requise)
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Setting;
 use App\Models\Contact;
+use App\Models\Expertise;
+ use App\Models\Actualite;
+use App\Models\Parametre;
 
 class ClientController extends Controller
 {
@@ -16,24 +19,29 @@ class ClientController extends Controller
     {
         return view('clients.about');
     }
-    public function Services()
+    public function actualite()
     {
-        return view('clients.services');
+        $actualites=Actualite::all();
+        return view('clients.actualite',compact('actualites'));
     }
    
    
-    public function Team()
+    public function expertise()
     {
-        return view('clients.team');
+
+        $expertises=Expertise::all();
+        return view('clients.expertise',compact('expertises'));
     }
 
     public function contact()
     {
-        return view('clients.contact');
+        $settings = \App\Models\Parametre::first();
+
+        return view('clients.contact', compact('settings'));
     }
  
-    public function store(Request $request)
-{
+    public function storeContact(Request $request)
+   {
     // Validate form data
     $request->validate([
         'name' => 'required|string|max:255',

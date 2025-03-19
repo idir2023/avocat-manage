@@ -44,7 +44,12 @@
                                             <td> {{ $contact->prenom }} </td>
                                             <td> {{ $contact->telephone }} </td>
 
-                                            <td> {{ $contact->email }} </td>
+                                            <td>
+                                                <a href="mailto:{{ $contact->email }}" class="btn btn-info btn-sm" >
+                                                    {{ $contact->email }}
+                                                </a>
+                                            </td>                                            
+                                           
                                             <td> {{ $contact->message }} </td>
                                             <td>
                                                 <!-- Edit Button -->

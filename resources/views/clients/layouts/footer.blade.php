@@ -49,8 +49,8 @@ $settings = \App\Models\Parametre::first();
             <div class="d-flex flex-column justify-content-start">
                 <a class="text-white mb-2" href="{{route('home')}}"><i class="fa fa-angle-right mr-2"></i>Home</a>
                 <a class="text-white mb-2" href="{{route('about')}}"><i class="fa fa-angle-right mr-2"></i>About</a>
-                <a class="text-white mb-2" href="{{route('services')}}"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                <a class="text-white mb-2" href="{{route('team')}}"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                <a class="text-white mb-2" href="{{route('actualite')}}"><i class="fa fa-angle-right mr-2"></i>Actualite</a>
+                <a class="text-white mb-2" href="{{route('expertise')}}"><i class="fa fa-angle-right mr-2"></i>Expertise</a>
                 <a class="text-white" href="{{route('contact')}}"><i class="fa fa-angle-right mr-2"></i>Contact</a>
             </div>
         </div>
