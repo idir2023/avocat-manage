@@ -33,6 +33,7 @@
     <!-- Page Header End -->
 
     <!-- Expertise Section Start -->
+    <!-- Expertise Section Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center pb-2">
@@ -42,25 +43,31 @@
             <div class="row">
                 <div class="col-12">
                     <div class="bg-primary rounded" style="height: 200px;"></div>
-                    <div class="owl-carousel team-carousel position-relative" style="margin-top: -97px; padding: 0 30px;">
-                        @if(isset($expertises) && $expertises->count() > 0)
-                            @foreach($expertises as $expertise)
-                            <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
-                                <h5 class="mb-2 px-4">{{ $expertise->nom }}</h5>
-                                <p class="mb-3 px-4">{{ $expertise->description }}</p>
-                                <div class="team-img position-relative">
-                                    @if(!empty($expertise->logo))
-                                        <img class="img-fluid" src="{{ Storage::url($expertise->logo) }}" alt="{{ $expertise->nom }}">
-                                    @else
-                                        <img class="img-fluid" src="{{ asset('images/default.png') }}" alt="Default Image">
-                                    @endif
-                                    <div class="team-social">
-                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="owl-carousel team-carousel position-relative"
+                        style="margin-top: -97px; padding: 0 30px;">
+                        @if ($expertises->count() > 0)
+                            @foreach ($expertises as $expertise)
+                                <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
+                                    <h5 class="mb-2 px-4">{{ $expertise->nom }}</h5>
+                                    <p class="mb-3 px-4">{{ $expertise->description }}</p>
+                                    <div class="team-img position-relative">
+                                        @if (!empty($expertise->logo))
+                                            <img class="img-fluid" src="{{ Storage::url($expertise->logo) }}"
+                                                alt="{{ $expertise->nom }}">
+                                        @else
+                                            <img class="img-fluid" src="{{ asset('images/default.png') }}"
+                                                alt="Default Image">
+                                        @endif
+                                        <div class="team-social">
+                                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
                         @else
                             <p class="text-center">No expertise found.</p>
@@ -70,6 +77,8 @@
             </div>
         </div>
     </div>
+    <!-- Expertise Section End -->
+
     <!-- Expertise Section End -->
 
     <!-- Footer Start -->
@@ -83,4 +92,5 @@
     @include('clients.layouts.scripts')
 
 </body>
+
 </html>
