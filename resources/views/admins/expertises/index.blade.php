@@ -45,7 +45,7 @@
                                             <td> {{ $expertise->nom }} </td>
                                             <td>
                                                 @if ($expertise->logo)
-                                                <img src="{{ Storage::url($actualite->logo) }}" alt="Logo" width="100">
+                                                <img src="{{ Storage::url($expertise->logo) }}" alt="Logo" width="100">
                                                 @else
                                                     No Logo
                                                 @endif
