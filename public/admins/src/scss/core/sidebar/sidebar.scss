@@ -21,6 +21,18 @@ Main sidebar
     box-shadow: $shadow;
 }
 
+.right-sidebar {
+    position: absolute;
+    width: 250px; /* Exemple */
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    padding-top: 64px;
+    background: #f8f9fa; /* Exemple */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Exemple */
+}
+
+
 /*******************
 sidebar navigation
 ******************/
