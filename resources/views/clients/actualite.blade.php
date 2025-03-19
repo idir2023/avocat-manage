@@ -51,8 +51,8 @@
                                 <div class="icon-box bg-secondary text-primary mt-2 mb-4 d-flex align-items-center justify-content-center"
                                     style="width: 80px; height: 80px; border-radius: 50%;">
                                     @if (!empty($actualite->logo))
-                                        <img class="img-fluid rounded-circle"
-                                            src="{{ asset('storage/' . $actualite->logo) }}" alt="{{ $actualite->nom }}"
+                                        <img class="img-fluid rounded-circle" src="{{ Storage::url($actualite->logo) }}"
+                                            alt="{{ $actualite->nom }}"
                                             style="width: 100%; height: 100%; object-fit: cover;">
                                     @else
                                         <i class="fa fa-2x fa-landmark"></i>

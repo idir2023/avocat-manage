@@ -50,7 +50,7 @@
                                 <p class="mb-3 px-4">{{ $expertise->description }}</p>
                                 <div class="team-img position-relative">
                                     @if(!empty($expertise->logo))
-                                        <img class="img-fluid" src="{{ asset('storage/' . $expertise->logo) }}" alt="{{ $expertise->nom }}">
+                                        <img class="img-fluid" src="{{ Storage::url($expertise->logo) }}" alt="{{ $expertise->nom }}">
                                     @else
                                         <img class="img-fluid" src="{{ asset('images/default.png') }}" alt="Default Image">
                                     @endif
