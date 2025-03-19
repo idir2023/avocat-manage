@@ -1,0 +1,13 @@
+{
+    "sidebar": {
+        "dashboard": "Tableau de bord",
+        "consultations": "Consultations",
+        "actualites": "Actualités",
+        "expertises": "Expertises",
+        "parametres": "Paramètres",
+        "contacts": "Contacts",
+        "auth": "Authentification",
+        "login": "Connexion",
+        "register": "Inscription"
+    }
+}

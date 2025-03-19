@@ -13,9 +13,13 @@
 
                         <!-- Success Alert -->
                         @if (session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <div class="alert alert-success alert-dismissible fade show d-flex align-items-center"
+                                role="alert"
+                                style="border-left: 5px solid #28a745; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                                <i class="mdi mdi-check-circle-outline me-2" style="font-size: 1.5rem;"></i>
+                                <strong>{{ session('success') }}</strong>
+                                <button type="button" class="close ms-auto" data-dismiss="alert" aria-label="Close"
+                                    style="border: none; background: transparent;">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>

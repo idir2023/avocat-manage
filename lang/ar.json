@@ -1,0 +1,13 @@
+{
+    "sidebar": {
+        "dashboard": "لوحة التحكم",
+        "consultations": "الاستشارات",
+        "actualites": "الأخبار",
+        "expertises": "الخبرات",
+        "parametres": "الإعدادات",
+        "contacts": "جهات الاتصال",
+        "auth": "المصادقة",
+        "login": "تسجيل الدخول",
+        "register": "التسجيل"
+    }
+}

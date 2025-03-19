@@ -1,0 +1,13 @@
+{
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "consultations": "Consultations",
+        "actualites": "News",
+        "expertises": "Expertise",
+        "parametres": "Settings",
+        "contacts": "Contacts",
+        "auth": "Authentication",
+        "login": "Login",
+        "register": "Register"
+    }
+}

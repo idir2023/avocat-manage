@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ContactController;
@@ -10,34 +12,41 @@ use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ExpertiseController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\AdminController;
- 
+use App\Http\Controllers\LanguageController;
 
+
+// Route::get('lang', [LanguageController::class, 'change'])->name("change.lang");
+
+ 
+// Routes publiques
 Route::get('/', [ClientController::class, 'home'])->name('home');
 Route::get('/about', [ClientController::class, 'About'])->name('about');
 Route::get('/services', [ClientController::class, 'Services'])->name('services');
 Route::get('/portfolio', [ClientController::class, 'Portfolio'])->name('portfolio');
 Route::get('/team', [ClientController::class, 'Team'])->name('team');
-// Route to handle the form submission
+
+// Route pour le formulaire de contact
 Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
 Route::post('/contact', [ClientController::class, 'store'])->name('contact.store');
 
+// Routes protégées (authentification requise)
 Route::middleware(['auth', 'verified'])->group(function () {
-    // Dashboard route
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-
-    // Resource routes for each entity, with the correct controllers
+    
+    // Ressources CRUD
     Route::resource('parametres', ParametreController::class);
-    Route::resource('consultations', ConsultationController::class);   
-    Route::resource('expertises', ExpertiseController::class);   
-    Route::resource('actualites', ActualiteController::class);   
+    Route::resource('consultations', ConsultationController::class);
+    Route::resource('expertises', ExpertiseController::class);
+    Route::resource('actualites', ActualiteController::class);
     Route::resource('contacts', ContactController::class);
 });
 
-
+// Gestion du profil utilisateur
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Inclusion des routes d'authentification
 require __DIR__.'/auth.php';

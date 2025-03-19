@@ -8,13 +8,19 @@
         <div class="row">
             <div class="col-12">
                 <div class="card shadow-lg rounded-lg">
-                    <div class="card-header">
-                        @if (session('success'))
-                            <div class="alert alert-success">{{ session('success') }}</div>
-                        @endif
-                    </div>
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert"
+                            style="border-left: 5px solid #28a745; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                            <i class="mdi mdi-check-circle-outline me-2" style="font-size: 1.5rem;"></i>
+                            <strong>{{ session('success') }}</strong>
+                            <button type="button" class="close ms-auto" data-dismiss="alert" aria-label="Close"
+                                style="border: none; background: transparent;">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
 
-                     <form action="{{ route('parametres.update', $parametre->id) }}" method="POST">
+                    <form action="{{ route('parametres.update', $parametre->id) }}" method="POST">
                         @csrf
                         @method('PUT')
 
