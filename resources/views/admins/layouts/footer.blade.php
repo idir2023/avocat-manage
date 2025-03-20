@@ -1,4 +1,4 @@
 <footer class="footer text-center">
-    All Rights Reserved by Matrix-admin. Designed and Developed by <a
-        href="https://www.wrappixel.com">Idir</a>.
+    Designed and Developed by <a
+        href="https://falcondeev.vercel.app/">FalconDev</a>.
 </footer>
