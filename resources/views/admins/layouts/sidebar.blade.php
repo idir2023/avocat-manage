@@ -8,7 +8,7 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="{{ route('dashboard') }}" aria-expanded="false">
                         <i class="mdi mdi-view-dashboard"></i>
-                        <span class="hide-menu">Dashboard</span>
+                        <span class="hide-menu">{{__('messages.dashboard')}}</span>
                     </a>
                 </li>
 

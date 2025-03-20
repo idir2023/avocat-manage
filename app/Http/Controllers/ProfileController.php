@@ -8,15 +8,65 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
-    /**
-     * Display the user's profile form.
-     */
+    public function User()
+    {
+        $users = User::paginate(5); // Correction ici
+        return view('admins.users.index', compact('users'));
+    }
+    public function StoreUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        User::create($request->all());
+        return redirect()->route('users.manage')
+            ->with('success', 'User created successfully.');
+    }
+
+    public function UpdateUser(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+         ]);
+        $user = User::find($id);
+        $user->update($request->all());
+        return redirect()->route('users.manage')
+            ->with('success', 'User updated successfully.');
+    }
+  
+    public function deleteUser($id)
+{
+    
+
+    // Find the user by ID
+    $user = User::find($id);
+
+    // If user exists, delete
+    if ($user) {
+        $user->delete();
+
+        // Redirect back with success message
+        return redirect()->route('users.manage')
+            ->with('success', 'User deleted successfully.');
+    }
+
+    // If user not found, redirect back with error message
+    return redirect()->route('users.manage')
+        ->with('error', 'User not found.');
+}
+
+    
+
     public function edit(Request $request): View
     {
-        return view('profile.edit', [
+        return view('admins.profile.edit', [
             'user' => $request->user(),
         ]);
     }

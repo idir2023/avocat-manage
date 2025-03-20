@@ -45,6 +45,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // User Management Routes
+    Route::get('/manage-users', [ProfileController::class, 'User'])->name('users.manage');  // Affichage gestion des utilisateurs
+    Route::post('/add-user', [ProfileController::class, 'StoreUser'])->name('users.store');
+    Route::patch('/update-user/{id}', [ProfileController::class, 'UpdateUser'])->name('users.update');
+    Route::delete('/delete-user/{id}', [ProfileController::class, 'deleteUser'])->name('users.destroy');
+
 });
 
 // Inclusion des routes d'authentification
