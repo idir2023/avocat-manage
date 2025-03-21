@@ -67,6 +67,24 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
+                {{-- <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        🌍 {{ strtoupper(app()->getLocale()) }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <a class="dropdown-item text-decoration-none" href="{{ route('change.lang', ['locale' => 'en']) }}">
+                            🇬🇧 <span class="me-2">English</span>
+                        </a>
+                        <a class="dropdown-item text-decoration-none" href="{{ route('change.lang', ['locale' => 'fr']) }}">
+                            🇫🇷 <span class="me-2">Français</span>
+                        </a>
+                        <a class="dropdown-item text-decoration-none" href="{{ route('change.lang', ['locale' => 'ar']) }}">
+                            🇸🇦 <span class="me-2">العربية</span>
+                        </a>
+                    </div>
+                </div> --}}
+                
+                
                 <!-- ============================================================== -->
                 <!-- Search -->
                 <!-- ============================================================== -->
