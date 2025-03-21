@@ -33,10 +33,7 @@ $settings = \App\Models\Parametre::first();
     </div>
     <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-5">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Justice</h1>
-            </a>
-            <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+            
             <div class="d-flex justify-content-start mt-4">
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="{{ $settings->twitter ?? '#' }}"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="{{ $settings->facebook ?? '#' }}"><i class="fab fa-facebook-f"></i></a>
@@ -54,28 +51,7 @@ $settings = \App\Models\Parametre::first();
                 <a class="text-white" href="{{route('contact')}}"><i class="fa fa-angle-right mr-2"></i>Contact</a>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
-            <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
-                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-            <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
-            <div class="w-100">
-                <div class="input-group">
-                    <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary px-4">Sign Up</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
     </div>
     <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
     
