@@ -15,11 +15,7 @@
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
-                <span class="logo-text">
-                    <!-- dark Logo text -->
-                    <img src="{{ asset('admins/assets/images/logo-text.png') }}" alt="homepage" class="light-logo" />
-
-                </span>
+              
                 <!-- Logo icon -->
                 <!-- <b class="logo-icon"> -->
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
