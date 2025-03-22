@@ -38,7 +38,7 @@ h2, h3, .display-3 {
 p {
     font-size: 20px;
     line-height: 2;
- 
+    color: #444;
 }
 
 </style>

@@ -72,7 +72,7 @@ p {
 
             <!-- Bloc explicatif -->
             <div class="col-lg-12 mb-5">
-                <div class="bg-white p-4 rounded shadow-sm">
+                <div class="p-4 rounded shadow-sm">
                     <h4 class="text-primary mb-3" style="font-size: 26px;">Posez votre question</h4>
                     <p style="font-size: 19px; line-height: 2;">
                         Vous pouvez présenter à <strong>Maître Hanane Bounit</strong> votre problème en remplissant le formulaire ci-dessous. 

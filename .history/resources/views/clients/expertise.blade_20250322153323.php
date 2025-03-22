@@ -12,36 +12,7 @@
     <!-- Favicon & Styles -->
     @include('clients.layouts.style')
 </head>
-<style>
-      body {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    /* line-height: 1.9; */
-    color: #333;
-}
 
-h1.display-3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 52px; /* légèrement plus grand */
-    color: #2c2c2c;
-}
-
-h2, h3, .display-3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 40px;
-    color: #3a3a3a;
-}
-
-p {
-    font-size: 20px;
-    /* line-height: 2; */
- 
-}
-</style>
 <body>
     <!-- Header Start -->
     @include('clients.layouts.header')

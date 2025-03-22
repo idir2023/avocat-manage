@@ -15,8 +15,8 @@
 <style>
       body {
     font-family: 'Lora', serif;
-    font-size: 18px;
-    /* line-height: 1.9; */
+    /* font-size: 18px; */
+    line-height: 1.9;
     color: #333;
 }
 
@@ -32,13 +32,13 @@ h2, h3, .display-3 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 40px;
+    font-size: 32px;
     color: #3a3a3a;
 }
 
 p {
     font-size: 20px;
-    /* line-height: 2; */
+    line-height: 2;
  
 }
 </style>

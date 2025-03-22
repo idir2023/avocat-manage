@@ -68,7 +68,7 @@ p {
             <h6 class="text-uppercase" style="font-size: 22px;">Contactez-nous</h6>
         </div>
 
-        <div class="row bg-light p-5 rounded">
+        <div class="row  p-5 rounded">
 
             <!-- Bloc explicatif -->
             <div class="col-lg-12 mb-5">
