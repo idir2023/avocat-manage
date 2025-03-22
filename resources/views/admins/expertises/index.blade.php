@@ -129,7 +129,7 @@
                                 </tbody>
                             </table>
                             <div class="d-flex justify-content-center">
-                                {!! $expertises->links() !!}
+                                {!! $expertises->links('pagination::bootstrap-5')  !!}
                             </div>
                         </div>
                     </div>

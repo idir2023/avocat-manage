@@ -139,7 +139,7 @@
 
                             <!-- Pagination Links -->
                             <div class="d-flex justify-content-center">
-                                {!! $contacts->links() !!} <!-- Pagination links -->
+                                {!! $contacts->links('pagination::bootstrap-5')  !!} <!-- Pagination links -->
                             </div>
                         </div>
                     </div>

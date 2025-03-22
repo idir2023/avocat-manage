@@ -27,6 +27,9 @@ Route::get('/expertise', [ClientController::class, 'expertise'])->name('expertis
 // Formulaire de contact
 Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
 Route::post('/contact', [ClientController::class, 'storeContact'])->name('contact.store');
+Route::post('/consultation', [ClientController::class, 'storeConsultation'])->name('consultation.store');
+
+
 
 // Routes protégées (auth requise)
 Route::middleware(['auth', 'verified'])->group(function () {

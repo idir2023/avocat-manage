@@ -11,10 +11,13 @@ class ConsultationController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $consultations = Consultation::all();
-        return view('admins.consultations.index', compact('consultations'));
-    }
+{
+    // Vous pouvez spécifier le nombre d'éléments par page, par exemple 10
+    $consultations = Consultation::paginate(10);
+    
+    return view('admins.consultations.index', compact('consultations'));
+}
+
 
     /**
      * Show the form for creating a new resource.
@@ -37,8 +40,9 @@ class ConsultationController extends Controller
      */
     public function show(Consultation $consultation)
     {
-        //
+        return view('admins.consultations.show', compact('consultation'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
