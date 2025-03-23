@@ -204,7 +204,7 @@ p {
 
 
     <!-- Appointment Start -->
-   @include('clients.layouts.appointment')
+   @include('clients.layouts.consultations')
     <!-- Appointment End -->
 
 

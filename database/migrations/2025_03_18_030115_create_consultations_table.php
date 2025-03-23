@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('prenom');
-            $table->string('email');
+             $table->string('email');
             $table->string('telephone', 50)->nullable();
             $table->text('probleme');
-            $table->string('fichier')->nullable(); // Stocker le fichier uploadé
+            $table->string('fichier')->nullable();  
             $table->enum('paiement_status', ['en attente', 'payé'])->default('en attente');
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->timestamps();
         });
     }

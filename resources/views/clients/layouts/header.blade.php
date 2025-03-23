@@ -5,8 +5,11 @@ $settings = \App\Models\Parametre::first();
     <div class="row">
         <div class="col-lg-3 bg-secondary d-none d-lg-block">
             <a href="{{route('home')}}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                <h1 class="m-0 display-4 text-primary text-uppercase">HB AVOCAT</h1>
-                
+                <h1 class="m-0 text-4xl font-extrabold text-primary text-uppercase leading-tight text-center shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    <span class="text-6xl text-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 rounded-lg">HB</span>
+                    <span class="text-4xl text-white"> Avocat</span>
+                </h1>
+                                
             </a>
         </div>
         <div class="col-lg-9">
@@ -56,7 +59,25 @@ $settings = \App\Models\Parametre::first();
                       
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="{{ route('login') }}" class="btn btn-primary mr-3 d-none d-lg-block">Sing up</a>
+                    @if(auth()->check())
+                    <a href="{{ route('logout') }}" class="btn btn-primary mr-3 d-none d-lg-block"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                
+                    @if(auth()->user()->is_admin)
+                        <a href="{{ route('dashboard') }}" class="btn btn-primary mr-3 d-none d-lg-block">Dashboard</a>
+                    @else
+                        <a href="{{ route('consultations.index') }}" class="btn btn-primary mr-3 d-none d-lg-block">See my consultations</a>
+                    @endif
+                @else
+                    <a href="{{ route('login') }}" class="btn btn-primary mr-3 d-none d-lg-block">Sign up</a>
+                @endif
+                
+                
                 </div>
             </nav>
         </div>

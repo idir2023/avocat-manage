@@ -64,6 +64,7 @@
                                             <a href="{{ route('consultations.show', $consultation->id) }}" class="btn btn-sm btn-info">
                                                 <i class="fas fa-eye"></i> Détails
                                             </a>
+                                            @if(auth()->user()->is_admin)
                                             <button type="button" class="btn btn-sm btn-danger delete-btn" data-id="{{ $consultation->id }}">
                                                 <i class="fas fa-trash"></i> Supprimer
                                             </button>
@@ -71,6 +72,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

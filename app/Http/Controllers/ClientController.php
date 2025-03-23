@@ -63,34 +63,7 @@ class ClientController extends Controller
 
     // Redirect back with success message
     return redirect()->back()->with('success', 'Your message has been sent successfully!');
-}
-
-public function storeConsultation(Request $request)
-{
-    $request->validate([
-        'nom' => 'required|string|max:255',
-        'prenom' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-        'telephone' => 'nullable|string|max:50',
-        'probleme' => 'required|string',
-        'fichier' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:2048',
-        'paiement_status' => 'required|in:en attente,payé',
-    ]);
-
-    $fichierPath = $request->file('fichier') ? $request->file('fichier')->store('consultations', 'public') : null;
-
-    Consultation::create([
-        'nom' => $request->nom,
-        'prenom' => $request->prenom,
-        'email' => $request->email,
-        'telephone' => $request->telephone,
-        'probleme' => $request->probleme,
-        'fichier' => $fichierPath,
-        'paiement_status' => $request->paiement_status,
-    ]);
-
-    return redirect()->back()->with('success', 'Consultation enregistrée avec succès.');
-}
-
+   }
+ 
 
 }

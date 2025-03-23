@@ -17,18 +17,25 @@ class ProfileController extends Controller
         $users = User::paginate(5); // Correction ici
         return view('admins.users.index', compact('users'));
     }
+ 
     public function StoreUser(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6',
         ]);
-        User::create($request->all());
-        return redirect()->route('users.manage')
-            ->with('success', 'User created successfully.');
+    
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password), // Hash the password
+            'is_admin' => true, // Assign is_admin as true
+        ]);
+    
+        return redirect()->route('users.manage')->with('success', 'User created successfully.');
     }
-
+    
     public function UpdateUser(Request $request, $id)
     {
         $request->validate([

@@ -19,6 +19,7 @@ class Consultation extends Model
         'probleme',
         'fichier',
         'paiement_status',
+        'user_id',
     ];
 
     // Accesseur pour récupérer le fichier avec le bon chemin (si stocké dans storage/app/public/consultations)

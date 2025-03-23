@@ -14,16 +14,16 @@ class ParametreSeeder extends Seeder
     public function run()
     {
         DB::table('parametres')->insert([
-            'nom' => 'John',
-            'prenom' => 'Doe',
-            'localisation' => 'New York, USA',
-            'email' => 'johndoe@example.com',
-            'telephone' => '+1234567890',
+            'nom' => 'Bounit',
+            'prenom' => 'hanane',
+            'localisation' => 'Agadir-maroc',
+            'email' => 'Cabinetbounit.avocat@gmail.com',
+            'telephone' => '0621309024',
             'instagram' => '@johndoe',
             'linkedin' => 'https://linkedin.com/in/johndoe',
             'facebook' => 'https://facebook.com/johndoe',
             'twitter' => '@johndoe',
-            'website' => 'https://johndoe.com',
+            'website' => 'https://cabinethbavocats.com/',
             'youtube' => 'https://youtube.com/johndoe',
         ]);
     }
