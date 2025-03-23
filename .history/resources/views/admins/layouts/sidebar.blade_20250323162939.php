@@ -58,7 +58,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('consultations.index') }}" aria-expanded="false">
                             <i class="mdi mdi-calendar-check"></i>
-                            <span class="hide-menu">Ma Consultation</span>
+                            <span class="hide-menu">My Consultations</span>
                         </a>
                     </li>
                 @endif
