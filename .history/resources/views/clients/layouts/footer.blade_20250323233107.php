@@ -52,7 +52,7 @@ $settings = \App\Models\Parametre::first();
                 <a class="text-white mb-2" href="{{route('about')}}"><i class="fa fa-angle-right mr-2"></i>Notre Histoire</a>
                 {{-- <a class="text-white mb-2" href="{{route('actualite')}}"><i class="fa fa-angle-right mr-2"></i>Actualités</a> --}}
                 <a class="text-white mb-2" href="{{route('expertise')}}"><i class="fa fa-angle-right mr-2"></i>Nos Domaines</a>
-                <a class="text-white mb-2" href="{{route('cons')}}"><i class="fa fa-angle-right mr-2"></i>Consultation</a>
+                <a class="text-white mb-2" href="{{route('expertise')}}"><i class="fa fa-angle-right mr-2"></i>Consultation</a>
                 <a class="text-white" href="{{route('contact')}}"><i class="fa fa-angle-right mr-2"></i>Contact</a>
             </div>
         </div>

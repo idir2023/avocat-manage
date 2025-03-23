@@ -49,10 +49,10 @@ $settings = \App\Models\Parametre::first();
             <h6 class="text-primary mb-3 text-center text-lg-left" style="font-size: 16px;">Liens utiles</h6>
             <div class="d-flex flex-column align-items-center align-items-lg-start">
                 <a class="text-white mb-2" href="{{route('home')}}"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
-                <a class="text-white mb-2" href="{{route('about')}}"><i class="fa fa-angle-right mr-2"></i>Notre Histoire</a>
+                <a class="text-white mb-2" href="{{route('about')}}"><i class="fa fa-angle-right mr-2"></i>À propos</a>
                 {{-- <a class="text-white mb-2" href="{{route('actualite')}}"><i class="fa fa-angle-right mr-2"></i>Actualités</a> --}}
                 <a class="text-white mb-2" href="{{route('expertise')}}"><i class="fa fa-angle-right mr-2"></i>Nos Domaines</a>
-                <a class="text-white mb-2" href="{{route('cons')}}"><i class="fa fa-angle-right mr-2"></i>Consultation</a>
+                <a class="text-white mb-2" href="{{route('expertise')}}"><i class="fa fa-angle-right mr-2"></i>Nos Domaines</a>
                 <a class="text-white" href="{{route('contact')}}"><i class="fa fa-angle-right mr-2"></i>Contact</a>
             </div>
         </div>
