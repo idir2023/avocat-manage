@@ -79,7 +79,7 @@ p {
                     <div class="p-3 text-center" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Écoute & Engagement</h4>
                         <h2 class="display-4 text-white mb-4">Un accompagnement juridique humain, efficace et rigoureux</h2>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('register') }}">Demander une Consultation</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('register') }}">Demander une consultation</a>
                     </div>
                 </div>
             </div>
@@ -150,85 +150,58 @@ p {
 
 
 
-     <!-- Domaines d'intervention Start -->
-<div class="container-fluid py-0">
-    <div class="container py-2">
+ <!-- Domaines d'intervention Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
         <div class="row">
+            <!-- Introduction -->
+            <div class="col-lg-3">
+                <h6 class="text-uppercase text-primary">Nos domaines</h6>
+                <h1 class="mb-4">Domaines d’intervention</h1>
+                <p>Nous accompagnons nos clients dans divers domaines du droit, avec une approche humaine, stratégique et rigoureuse, adaptée à chaque situation personnelle ou professionnelle.</p>
+                <a href="{{ route('register') }}" class="btn btn-primary mt-2">Demander une consultation</a>
+            </div>
+
             <!-- Carousel des services -->
-            <div class="col-12">
-                
-                <div class="bg-primary rounded mb-5" style="height: 200px;"></div>
+            <div class="col-lg-9 pt-5 pt-lg-0">
+                <div class="bg-primary rounded" style="height: 200px;"></div>
                 <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
 
-                    <!-- START: Domain Cards (same content, styled to show 6 per slide) -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
+                    <!-- Droit du travail -->
+                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 360px;">
                         <div class="icon-box bg-secondary text-white mb-4">
                             <i class="fa fa-2x fa-briefcase"></i>
                         </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit social approfondie</h5>
-                        <p style="font-size: 17px;">Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
+                        <h5 class="mb-3" style="font-size: 20px;">Droit du Travail</h5>
+                        <p style="font-size: 16px;">Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
                     </div>
 
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
+                    <!-- Droit des contrats -->
+                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 360px;">
                         <div class="icon-box bg-secondary text-white mb-4">
                             <i class="fa fa-2x fa-file-contract"></i>
                         </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit des Contrats</h5>
-                        <p style="font-size: 17px;">Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
+                        <h5 class="mb-3" style="font-size: 20px;">Droit des Contrats</h5>
+                        <p style="font-size: 16px;">Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
                     </div>
 
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
+                    <!-- Conseils juridiques -->
+                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 360px;">
                         <div class="icon-box bg-secondary text-white mb-4">
                             <i class="fa fa-2x fa-lightbulb"></i>
                         </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Conseils Juridiques</h5>
-                        <p style="font-size: 17px;">Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
+                        <h5 class="mb-3" style="font-size: 20px;">Conseils Juridiques</h5>
+                        <p style="font-size: 16px;">Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
                     </div>
 
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
+                    <!-- Formations professionnelles -->
+                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 360px;">
                         <div class="icon-box bg-secondary text-white mb-4">
                             <i class="fa fa-2x fa-chalkboard-teacher"></i>
                         </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Formations Professionnelles</h5>
-                        <p style="font-size: 17px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
+                        <h5 class="mb-3" style="font-size: 20px;">Formations Professionnelles</h5>
+                        <p style="font-size: 16px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
                     </div>
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-piggy-bank"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit Financier</h5>
-                        <p style="font-size: 17px;">Conseils en matière de régulation financière, opérations de financement, et conformité aux normes financières.</p>
-                    </div>
-            
-                    <!-- Droit de la Famille -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-heart"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit de la Famille</h5>
-                        <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
-                    </div>
-                      <!-- Recours juridiques -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-balance-scale"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Faire un Recours</h5>
-            <p style="font-size: 17px;">Assistance dans la préparation et le dépôt de recours administratifs ou contentieux selon votre situation.</p>
-        </div>
-
-        <!-- Démarches de visa -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-passport"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Démarches de Visa</h5>
-            <p style="font-size: 17px;">Conseil et accompagnement dans les demandes de visa (Schengen, USA, Canada...), avec constitution du dossier.</p>
-        </div>
-
-
-                    <!-- Ajoute les autres cartes ici avec les mêmes classes -->
-                    <!-- Assure-toi que chaque ".d-flex..." a bien class "mx-2" pour l'espacement horizontal -->
 
                 </div>
             </div>
@@ -236,40 +209,6 @@ p {
     </div>
 </div>
 <!-- Domaines d'intervention End -->
-
-<!-- Owl Carousel config (met dans un script en bas de page ou dans un fichier JS) -->
-<script>
-    $(document).ready(function(){
-        $(".service-carousel").owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            smartSpeed: 1000,
-            responsive:{
-                0:{
-                    items:1
-                },
-                576:{
-                    items:2
-                },
-                768:{
-                    items:3
-                },
-                992:{
-                    items:4
-                },
-                1200:{
-                    items:6
-                }
-            }
-        });
-    });
-</script>
-
-
 
 
     <!-- Appointment Start -->

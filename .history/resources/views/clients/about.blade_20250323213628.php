@@ -85,7 +85,7 @@ p {
                     </p>
 
                     <p class="text-muted mb-3">
-                        Trilingue <strong>Français, Anglais et Arabe</strong>, Me Hanane Bounit s’appuie sur un parcours académique solide : plusieurs masters en droit social approfondie, droit des affaires, droit de l’entreprise ,droit civil et  droit de famille.
+                        Trilingue <strong>Français, Anglais et Arabe</strong>, Me Hanane Bounit s’appuie sur un parcours académique solide : plusieurs masters en droit social approfondie, droit des affaires, droit de l’entreprise et  droit de famille.
                     </p>
 
                     <p class="text-muted mb-3">

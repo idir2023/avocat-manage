@@ -22,7 +22,7 @@ class ClientController extends Controller
     }
     public function cons()
     {
-        return view('clients.cons');
+        return view('clients.about');
     }
     public function actualite()
     {

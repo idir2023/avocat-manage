@@ -83,8 +83,10 @@
                                 
                             </form>
                         @else
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('register') }}">  Connectez-vous pour payer</a>
-                           
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('contact') }}">Nous contacter</a>
+                            <a href="{{ route('register') }}"   <a class="btn btn-primary py-3 px-5 mt-2" >
+                                Connectez-vous pour payer
+                            </a>
                         @endif
                     </div>
                 </div>

@@ -24,7 +24,6 @@ Route::get('/expertise', [ClientController::class, 'expertise'])->name('expertis
 
 // Formulaire de contact
 Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
-
 Route::post('/contact', [ClientController::class, 'storeContact'])->name('contact.store');
 
 // Formulaire de consultation

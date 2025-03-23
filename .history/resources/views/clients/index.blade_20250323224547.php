@@ -208,24 +208,6 @@ p {
                         <h5 class="mb-3" style="font-size: 22px;">Droit de la Famille</h5>
                         <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
                     </div>
-                      <!-- Recours juridiques -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-balance-scale"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Faire un Recours</h5>
-            <p style="font-size: 17px;">Assistance dans la préparation et le dépôt de recours administratifs ou contentieux selon votre situation.</p>
-        </div>
-
-        <!-- Démarches de visa -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-passport"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Démarches de Visa</h5>
-            <p style="font-size: 17px;">Conseil et accompagnement dans les demandes de visa (Schengen, USA, Canada...), avec constitution du dossier.</p>
-        </div>
-
 
                     <!-- Ajoute les autres cartes ici avec les mêmes classes -->
                     <!-- Assure-toi que chaque ".d-flex..." a bien class "mx-2" pour l'espacement horizontal -->

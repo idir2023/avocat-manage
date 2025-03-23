@@ -124,55 +124,55 @@ $icones = [
             <div class="container py-2">
                 <div class="row">
                     <!-- Introduction -->
-                        <div class="col-lg-3">
-                            <h6 class="text-uppercase text-primary" style="font-size: 18px;">Nos domaines</h6>
-                            <h1 class="mb-4" style="font-size: 42px; font-weight: 700;">Domaines d’intervention</h1>
-                            <p style="font-size: 18px; line-height: 1.9;">
-                                Nous accompagnons nos clients dans divers domaines du droit, avec une approche humaine, stratégique et rigoureuse, adaptée à chaque situation personnelle ou professionnelle.
-                            </p>
-                            <a href="{{ route('contact') }}" class="btn btn-primary mt-2">Demander une Consultation</a>
-                        </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-uppercase text-primary" style="font-size: 18px;">Nos domaines</h6>
+                        <h1 class="mb-4" style="font-size: 42px; font-weight: 700;">Domaines d’intervention</h1>
+                        <p style="font-size: 18px; line-height: 1.9;">
+                            Nous accompagnons nos clients dans divers domaines du droit, avec une approche humaine, stratégique et rigoureuse, adaptée à chaque situation personnelle ou professionnelle.
+                        </p>
+                        <a href="{{ route('contact') }}" class="btn btn-primary mt-2">Demander une Consultation</a>
+                    </div>
 
-                        <!-- Carousel des services -->
-                        <div class="col-lg-9 pt-5 pt-lg-0">
-                            <div class="bg-primary rounded" style="height: 200px;"></div>
-                            <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
+                    <!-- Carousel des services -->
+                    <div class="col-lg-9 pt-5 pt-lg-0">
+                        <div class="bg-primary rounded" style="height: 200px;"></div>
+                        <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
 
-                                <!-- Droit du travail -->
-                                <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                                    <div class="icon-box bg-secondary text-white mb-4">
-                                        <i class="fa fa-2x fa-briefcase"></i>
-                                    </div>
-                                    <h5 class="mb-3" style="font-size: 22px;">Droit social approfondie</h5>
-                                    <p style="font-size: 17px;">Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
+                            <!-- Droit du travail -->
+                            <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
+                                <div class="icon-box bg-secondary text-white mb-4">
+                                    <i class="fa fa-2x fa-briefcase"></i>
                                 </div>
+                                <h5 class="mb-3" style="font-size: 22px;">Droit social approfondie</h5>
+                                <p style="font-size: 17px;">Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
+                            </div>
 
-                                <!-- Droit des contrats -->
-                                <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                                    <div class="icon-box bg-secondary text-white mb-4">
-                                        <i class="fa fa-2x fa-file-contract"></i>
-                                    </div>
-                                    <h5 class="mb-3" style="font-size: 22px;">Droit des Contrats</h5>
-                                    <p style="font-size: 17px;">Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
+                            <!-- Droit des contrats -->
+                            <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
+                                <div class="icon-box bg-secondary text-white mb-4">
+                                    <i class="fa fa-2x fa-file-contract"></i>
                                 </div>
+                                <h5 class="mb-3" style="font-size: 22px;">Droit des Contrats</h5>
+                                <p style="font-size: 17px;">Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
+                            </div>
 
-                                <!-- Conseils juridiques -->
-                                <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                                    <div class="icon-box bg-secondary text-white mb-4">
-                                        <i class="fa fa-2x fa-lightbulb"></i>
-                                    </div>
-                                    <h5 class="mb-3" style="font-size: 22px;">Conseils Juridiques</h5>
-                                    <p style="font-size: 17px;">Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
+                            <!-- Conseils juridiques -->
+                            <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
+                                <div class="icon-box bg-secondary text-white mb-4">
+                                    <i class="fa fa-2x fa-lightbulb"></i>
                                 </div>
+                                <h5 class="mb-3" style="font-size: 22px;">Conseils Juridiques</h5>
+                                <p style="font-size: 17px;">Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
+                            </div>
 
-                                <!-- Formations professionnelles -->
-                                <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                                    <div class="icon-box bg-secondary text-white mb-4">
-                                        <i class="fa fa-2x fa-chalkboard-teacher"></i>
-                                    </div>
-                                    <h5 class="mb-3" style="font-size: 22px;">Formations Professionnelles</h5>
-                                    <p style="font-size: 17px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
+                            <!-- Formations professionnelles -->
+                            <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
+                                <div class="icon-box bg-secondary text-white mb-4">
+                                    <i class="fa fa-2x fa-chalkboard-teacher"></i>
                                 </div>
+                                <h5 class="mb-3" style="font-size: 22px;">Formations Professionnelles</h5>
+                                <p style="font-size: 17px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
+                            </div>
                             <!-- Droit comparé -->
         <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
             <div class="icon-box bg-secondary text-white mb-4">
@@ -244,7 +244,15 @@ $icones = [
             <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
         </div>
 
-     
+        <!-- Droit Social Approfondi -->
+        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
+            <div class="icon-box bg-secondary text-white mb-4">
+                <i class="fa fa-2x fa-users-cog"></i>
+            </div>
+            <h5 class="mb-3" style="font-size: 22px;">Droit Social Approfondi</h5>
+            <p style="font-size: 17px;">Analyse approfondie des relations collectives de travail, conventions collectives, CSE, protection sociale, etc.</p>
+        </div>
+
 
 
                         </div>

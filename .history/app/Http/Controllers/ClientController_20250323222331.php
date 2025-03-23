@@ -20,9 +20,9 @@ class ClientController extends Controller
     {
         return view('clients.about');
     }
-    public function cons()
+    public function About()
     {
-        return view('clients.cons');
+        return view('clients.about');
     }
     public function actualite()
     {

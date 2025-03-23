@@ -18,13 +18,12 @@ use App\Http\Controllers\StripeController;
 // Routes publiques
 Route::get('/', [ClientController::class, 'home'])->name('home');
 Route::get('/about', [ClientController::class, 'about'])->name('about');
-Route::get('/cons', [ClientController::class, 'cons'])->name('cons');
+Route::get('/about', [ClientController::class, 'about'])->name('about');
 Route::get('/actualite', [ClientController::class, 'actualite'])->name('actualite');
 Route::get('/expertise', [ClientController::class, 'expertise'])->name('expertise');
 
 // Formulaire de contact
 Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
-
 Route::post('/contact', [ClientController::class, 'storeContact'])->name('contact.store');
 
 // Formulaire de consultation

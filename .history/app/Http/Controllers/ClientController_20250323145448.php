@@ -20,10 +20,6 @@ class ClientController extends Controller
     {
         return view('clients.about');
     }
-    public function cons()
-    {
-        return view('clients.cons');
-    }
     public function actualite()
     {
         $actualites=Actualite::all();

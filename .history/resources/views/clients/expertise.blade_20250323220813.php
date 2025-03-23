@@ -244,7 +244,15 @@ $icones = [
             <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
         </div>
 
-     
+        <!-- Droit Social Approfondi -->
+        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
+            <div class="icon-box bg-secondary text-white mb-4">
+                <i class="fa fa-2x fa-users-cog"></i>
+            </div>
+            <h5 class="mb-3" style="font-size: 22px;">Droit Social Approfondi</h5>
+            <p style="font-size: 17px;">Analyse approfondie des relations collectives de travail, conventions collectives, CSE, protection sociale, etc.</p>
+        </div>
+
 
 
                         </div>

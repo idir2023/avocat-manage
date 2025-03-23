@@ -151,124 +151,138 @@ p {
 
 
      <!-- Domaines d'intervention Start -->
-<div class="container-fluid py-0">
-    <div class="container py-2">
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase text-primary" style="font-size: 20px;">Nos domaines</h6>
+            <h1 class="mb-4" style="font-size: 42px; font-weight: 700;">Domaines d’intervention</h1>
+        </div>
+
         <div class="row">
-            <!-- Carousel des services -->
-            <div class="col-12">
-                
-                <div class="bg-primary rounded mb-5" style="height: 200px;"></div>
-                <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
-
-                    <!-- START: Domain Cards (same content, styled to show 6 per slide) -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-briefcase"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit social approfondie</h5>
-                        <p style="font-size: 17px;">Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
+            <!-- Bloc de domaine -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-briefcase"></i>
                     </div>
-
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-file-contract"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit des Contrats</h5>
-                        <p style="font-size: 17px;">Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-lightbulb"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Conseils Juridiques</h5>
-                        <p style="font-size: 17px;">Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-chalkboard-teacher"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Formations Professionnelles</h5>
-                        <p style="font-size: 17px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
-                    </div>
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-piggy-bank"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit Financier</h5>
-                        <p style="font-size: 17px;">Conseils en matière de régulation financière, opérations de financement, et conformité aux normes financières.</p>
-                    </div>
-            
-                    <!-- Droit de la Famille -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-heart"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit de la Famille</h5>
-                        <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
-                    </div>
-                      <!-- Recours juridiques -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-balance-scale"></i>
+                    <h5 class="mb-2">Droit social approfondie</h5>
+                    <p>Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
+                </div>
             </div>
-            <h5 class="mb-3" style="font-size: 22px;">Faire un Recours</h5>
-            <p style="font-size: 17px;">Assistance dans la préparation et le dépôt de recours administratifs ou contentieux selon votre situation.</p>
-        </div>
 
-        <!-- Démarches de visa -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-passport"></i>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-file-contract"></i>
+                    </div>
+                    <h5 class="mb-2">Droit des Contrats</h5>
+                    <p>Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
+                </div>
             </div>
-            <h5 class="mb-3" style="font-size: 22px;">Démarches de Visa</h5>
-            <p style="font-size: 17px;">Conseil et accompagnement dans les demandes de visa (Schengen, USA, Canada...), avec constitution du dossier.</p>
-        </div>
 
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-lightbulb"></i>
+                    </div>
+                    <h5 class="mb-2">Conseils Juridiques</h5>
+                    <p>Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
+                </div>
+            </div>
 
-                    <!-- Ajoute les autres cartes ici avec les mêmes classes -->
-                    <!-- Assure-toi que chaque ".d-flex..." a bien class "mx-2" pour l'espacement horizontal -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-chalkboard-teacher"></i>
+                    </div>
+                    <h5 class="mb-2">Formations Professionnelles</h5>
+                    <p>Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
+                </div>
+            </div>
 
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-globe"></i>
+                    </div>
+                    <h5 class="mb-2">Droit Comparé</h5>
+                    <p>Analyse entre le droit marocain et international, pour une meilleure compréhension et défense dans les affaires transfrontalières.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-balance-scale"></i>
+                    </div>
+                    <h5 class="mb-2">Faire un Recours</h5>
+                    <p>Assistance dans la préparation et le dépôt de recours administratifs ou contentieux selon votre situation.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-passport"></i>
+                    </div>
+                    <h5 class="mb-2">Démarches de Visa</h5>
+                    <p>Conseil et accompagnement dans les demandes de visa (Schengen, USA, Canada...), avec constitution du dossier.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-folder-open"></i>
+                    </div>
+                    <h5 class="mb-2">Suivi des Dossiers</h5>
+                    <p>Nous assurons un suivi régulier et transparent de votre dossier jusqu’à la résolution finale de votre affaire.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-coins"></i>
+                    </div>
+                    <h5 class="mb-2">Droit Fiscal</h5>
+                    <p>Accompagnement dans les problématiques fiscales : déclarations, contentieux avec l’administration, régularisations.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-landmark"></i>
+                    </div>
+                    <h5 class="mb-2">Droit Administratif</h5>
+                    <p>Recours contre les décisions administratives, contentieux avec l’administration, devant les juridictions administratives.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-piggy-bank"></i>
+                    </div>
+                    <h5 class="mb-2">Droit Financier</h5>
+                    <p>Conseils en matière de régulation financière, opérations de financement, conformité aux normes financières.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded text-center p-4 shadow-sm h-100">
+                    <div class="icon-box bg-secondary text-white mb-3">
+                        <i class="fa fa-2x fa-heart"></i>
+                    </div>
+                    <h5 class="mb-2">Droit de la Famille</h5>
+                    <p>Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Domaines d'intervention End -->
-
-<!-- Owl Carousel config (met dans un script en bas de page ou dans un fichier JS) -->
-<script>
-    $(document).ready(function(){
-        $(".service-carousel").owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            smartSpeed: 1000,
-            responsive:{
-                0:{
-                    items:1
-                },
-                576:{
-                    items:2
-                },
-                768:{
-                    items:3
-                },
-                992:{
-                    items:4
-                },
-                1200:{
-                    items:6
-                }
-            }
-        });
-    });
-</script>
-
 
 
 

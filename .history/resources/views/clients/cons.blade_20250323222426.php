@@ -106,62 +106,7 @@ p {
     <!-- About End -->
  
 
-<!-- Pourquoi nous choisir Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="row">
-            <!-- Image -->
-            <div class="col-lg-6" style="min-height: 500px;">
-                <div class="position-relative h-100 rounded overflow-hidden">
-                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/feature.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
-                </div>
-            </div>
 
-            <!-- Contenu -->
-            <div class="col-lg-6 pt-5 pb-lg-5">
-                <div class="feature-text bg-white rounded shadow p-lg-5">
-                    <h6 class="text-primary text-uppercase mb-3">Nos Atouts</h6>
-                    <h2 class="mb-4 text-dark">Pourquoi choisir notre cabinet</h2>
-
-                    <!-- Point 1 -->
-                    <div class="d-flex mb-4">
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">01</h5>
-                        </div>
-                        <div class="ml-4">
-                            <h5>Expertise juridique approfondie</h5>
-                            <p class="m-0">Nous mettons à votre disposition une expertise solide dans divers domaines du droit, avec une approche rigoureuse et personnalisée.</p>
-                        </div>
-                    </div>
-
-                    <!-- Point 2 -->
-                    <div class="d-flex mb-4">
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">02</h5>
-                        </div>
-                        <div class="ml-4">
-                            <h5>Écoute, confiance et réactivité</h5>
-                            <p class="m-0">Nous plaçons la relation client au cœur de notre mission, avec une disponibilité constante et une confidentialité garantie.</p>
-                        </div>
-                    </div>
-
-                    <!-- Point 3 -->
-                    <div class="d-flex">
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">03</h5>
-                        </div>
-                        <div class="ml-4">
-                            <h5>Résultats concrets et efficaces</h5>
-                            <p class="m-0">Nous nous engageons à obtenir les résultats que vous méritez grâce à une stratégie claire, rigoureuse et orientée vers la réussite.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Pourquoi nous choisir End -->
 
     <!-- Features End -->
     <div class="container-fluid py-5">

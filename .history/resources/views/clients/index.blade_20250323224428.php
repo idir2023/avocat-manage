@@ -156,7 +156,6 @@ p {
         <div class="row">
             <!-- Carousel des services -->
             <div class="col-12">
-                
                 <div class="bg-primary rounded mb-5" style="height: 200px;"></div>
                 <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
 
@@ -192,40 +191,6 @@ p {
                         <h5 class="mb-3" style="font-size: 22px;">Formations Professionnelles</h5>
                         <p style="font-size: 17px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
                     </div>
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-piggy-bank"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit Financier</h5>
-                        <p style="font-size: 17px;">Conseils en matière de régulation financière, opérations de financement, et conformité aux normes financières.</p>
-                    </div>
-            
-                    <!-- Droit de la Famille -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-heart"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit de la Famille</h5>
-                        <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
-                    </div>
-                      <!-- Recours juridiques -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-balance-scale"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Faire un Recours</h5>
-            <p style="font-size: 17px;">Assistance dans la préparation et le dépôt de recours administratifs ou contentieux selon votre situation.</p>
-        </div>
-
-        <!-- Démarches de visa -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-passport"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Démarches de Visa</h5>
-            <p style="font-size: 17px;">Conseil et accompagnement dans les demandes de visa (Schengen, USA, Canada...), avec constitution du dossier.</p>
-        </div>
-
 
                     <!-- Ajoute les autres cartes ici avec les mêmes classes -->
                     <!-- Assure-toi que chaque ".d-flex..." a bien class "mx-2" pour l'espacement horizontal -->

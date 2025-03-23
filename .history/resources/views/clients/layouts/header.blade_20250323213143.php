@@ -55,7 +55,7 @@ $settings = \App\Models\Parametre::first();
                         <a href="{{route('about')}}" class="nav-item nav-link">Notre Histoire</a>
                         {{-- <a href="{{route('actualite')}}" class="nav-item nav-link">Actualité</a> --}}
                         <a href="{{route('expertise')}}" class="nav-item nav-link">Nos Domaines</a>
-                        <a href="{{route('cons')}}" class="nav-item nav-link">Consultation</a>
+                        <a href="{{route('expertise')}}" class="nav-item nav-link">Consultation</a>
                       
                         <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     </div>

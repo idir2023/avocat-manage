@@ -148,128 +148,74 @@ p {
     </div>
 </div>
 
-
-
-     <!-- Domaines d'intervention Start -->
-<div class="container-fluid py-0">
-    <div class="container py-2">
-        <div class="row">
-            <!-- Carousel des services -->
-            <div class="col-12">
-                
-                <div class="bg-primary rounded mb-5" style="height: 200px;"></div>
-                <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
-
-                    <!-- START: Domain Cards (same content, styled to show 6 per slide) -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-briefcase"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit social approfondie</h5>
-                        <p style="font-size: 17px;">Accompagnement des salariés et employeurs : contrats, ruptures, harcèlement moral, licenciements abusifs, etc.</p>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-file-contract"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit des Contrats</h5>
-                        <p style="font-size: 17px;">Rédaction, relecture et négociation de contrats commerciaux, professionnels ou civils avec sécurité juridique.</p>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-lightbulb"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Conseils Juridiques</h5>
-                        <p style="font-size: 17px;">Éclairage juridique personnalisé pour particuliers ou entreprises, analyse de situation, anticipation des risques.</p>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm mx-2" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-chalkboard-teacher"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Formations Professionnelles</h5>
-                        <p style="font-size: 17px;">Sessions de formation juridique adaptées aux entreprises, RH ou élus du personnel : droit social, contrats, obligations.</p>
-                    </div>
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-piggy-bank"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit Financier</h5>
-                        <p style="font-size: 17px;">Conseils en matière de régulation financière, opérations de financement, et conformité aux normes financières.</p>
-                    </div>
-            
-                    <!-- Droit de la Famille -->
-                    <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-                        <div class="icon-box bg-secondary text-white mb-4">
-                            <i class="fa fa-2x fa-heart"></i>
-                        </div>
-                        <h5 class="mb-3" style="font-size: 22px;">Droit de la Famille</h5>
-                        <p style="font-size: 17px;">Mariage, divorce, pension alimentaire, garde d’enfants, succession : un accompagnement humain et stratégique.</p>
-                    </div>
-                      <!-- Recours juridiques -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-balance-scale"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Faire un Recours</h5>
-            <p style="font-size: 17px;">Assistance dans la préparation et le dépôt de recours administratifs ou contentieux selon votre situation.</p>
+<!-- Domaines d'intervention avec scroll horizontal stylé -->
+<div class="container-fluid py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase text-danger" style="font-size: 18px; letter-spacing: 1px;">Nos domaines</h6>
+            <h1 class="mb-4" style="font-size: 42px; font-weight: 700; color: #b30000;">Domaines d’intervention</h1>
+            <p style="font-size: 18px; line-height: 1.8; color: #444;">
+                Notre cabinet propose un accompagnement juridique complet et personnalisé, adapté à chaque situation.
+            </p>
         </div>
 
-        <!-- Démarches de visa -->
-        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-4 pb-4 shadow-sm" style="min-height: 380px;">
-            <div class="icon-box bg-secondary text-white mb-4">
-                <i class="fa fa-2x fa-passport"></i>
-            </div>
-            <h5 class="mb-3" style="font-size: 22px;">Démarches de Visa</h5>
-            <p style="font-size: 17px;">Conseil et accompagnement dans les demandes de visa (Schengen, USA, Canada...), avec constitution du dossier.</p>
-        </div>
+        <!-- Scroll horizontal -->
+        <div class="d-flex overflow-auto pb-3" style="gap: 20px; scroll-snap-type: x mandatory;">
 
-
-                    <!-- Ajoute les autres cartes ici avec les mêmes classes -->
-                    <!-- Assure-toi que chaque ".d-flex..." a bien class "mx-2" pour l'espacement horizontal -->
-
+            <!-- Carte domaine (exemple réutilisable) -->
+            <div class="flex-shrink-0 bg-white rounded shadow-sm px-4 pt-4 pb-3 text-center" style="min-width: 300px; max-width: 300px; scroll-snap-align: start; border-top: 5px solid #b30000;">
+                <div class="icon-box bg-secondary text-white mb-3 rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                    <i class="fa fa-briefcase fa-lg"></i>
                 </div>
+                <h5 class="mb-2" style="font-size: 20px; color: #b30000;">Droit Social Approfondi</h5>
+                <p style="font-size: 15px; color: #333;">Contrats, harcèlement, licenciements, relations collectives...</p>
             </div>
+
+            <div class="flex-shrink-0 bg-white rounded shadow-sm px-4 pt-4 pb-3 text-center" style="min-width: 300px; max-width: 300px; scroll-snap-align: start; border-top: 5px solid #b30000;">
+                <div class="icon-box bg-secondary text-white mb-3 rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                    <i class="fa fa-file-contract fa-lg"></i>
+                </div>
+                <h5 class="mb-2" style="font-size: 20px; color: #b30000;">Droit des Contrats</h5>
+                <p style="font-size: 15px; color: #333;">Rédaction et sécurisation des engagements contractuels.</p>
+            </div>
+
+            <div class="flex-shrink-0 bg-white rounded shadow-sm px-4 pt-4 pb-3 text-center" style="min-width: 300px; max-width: 300px; scroll-snap-align: start; border-top: 5px solid #b30000;">
+                <div class="icon-box bg-secondary text-white mb-3 rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                    <i class="fa fa-balance-scale fa-lg"></i>
+                </div>
+                <h5 class="mb-2" style="font-size: 20px; color: #b30000;">Recours Juridiques</h5>
+                <p style="font-size: 15px; color: #333;">Appuis juridiques pour les recours administratifs et judiciaires.</p>
+            </div>
+
+            <div class="flex-shrink-0 bg-white rounded shadow-sm px-4 pt-4 pb-3 text-center" style="min-width: 300px; max-width: 300px; scroll-snap-align: start; border-top: 5px solid #b30000;">
+                <div class="icon-box bg-secondary text-white mb-3 rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                    <i class="fa fa-passport fa-lg"></i>
+                </div>
+                <h5 class="mb-2" style="font-size: 20px; color: #b30000;">Démarches de Visa</h5>
+                <p style="font-size: 15px; color: #333;">Accompagnement visa Schengen, USA, Canada, etc.</p>
+            </div>
+
+            <div class="flex-shrink-0 bg-white rounded shadow-sm px-4 pt-4 pb-3 text-center" style="min-width: 300px; max-width: 300px; scroll-snap-align: start; border-top: 5px solid #b30000;">
+                <div class="icon-box bg-secondary text-white mb-3 rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                    <i class="fa fa-coins fa-lg"></i>
+                </div>
+                <h5 class="mb-2" style="font-size: 20px; color: #b30000;">Droit Fiscal</h5>
+                <p style="font-size: 15px; color: #333;">Gestion des contentieux fiscaux, régularisations.</p>
+            </div>
+
+            <div class="flex-shrink-0 bg-white rounded shadow-sm px-4 pt-4 pb-3 text-center" style="min-width: 300px; max-width: 300px; scroll-snap-align: start; border-top: 5px solid #b30000;">
+                <div class="icon-box bg-secondary text-white mb-3 rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                    <i class="fa fa-heart fa-lg"></i>
+                </div>
+                <h5 class="mb-2" style="font-size: 20px; color: #b30000;">Droit de la Famille</h5>
+                <p style="font-size: 15px; color: #333;">Mariage, divorce, successions, garde d’enfants.</p>
+            </div>
+
+            <!-- Ajoute d'autres domaines ici... -->
+
         </div>
     </div>
 </div>
-<!-- Domaines d'intervention End -->
-
-<!-- Owl Carousel config (met dans un script en bas de page ou dans un fichier JS) -->
-<script>
-    $(document).ready(function(){
-        $(".service-carousel").owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            smartSpeed: 1000,
-            responsive:{
-                0:{
-                    items:1
-                },
-                576:{
-                    items:2
-                },
-                768:{
-                    items:3
-                },
-                992:{
-                    items:4
-                },
-                1200:{
-                    items:6
-                }
-            }
-        });
-    });
-</script>
-
-
 
 
     <!-- Appointment Start -->
