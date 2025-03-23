@@ -22,7 +22,7 @@
                                 </button>
                             </div>
                         @endif
-
+    {{-- rrrrrrrrrrrrrrrrrrrr --}}
 
                         <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#createModal">
                             Ajouter une nouvelle actualité
