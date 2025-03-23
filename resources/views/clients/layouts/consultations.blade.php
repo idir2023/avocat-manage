@@ -73,10 +73,14 @@
 
                                 <div>
                                     <button id="checkout-button" class="btn btn-primary btn-block border-0 py-3">
-                                        Passer au paiement
-                                    </button>
+                                        Passer au paiement 
+                                     </button>
                                     <input type="hidden" id="consultation_id" name="consultation_id">
                                 </div>
+                                <div id="loading" style="display: none; text-align: center; margin-bottom: 10px;">
+                                    <span class="spinner-border spinner-border-sm text-light"></span> Traitement en cours...
+                                </div>
+                                
                             </form>
                         @else
                             <a href="{{ route('register') }}" class="btn btn-danger btn-block border-0 py-3">
@@ -96,10 +100,14 @@
 $(document).ready(function () {
     $("#checkout-button").click(function (e) {
         e.preventDefault();
+        
         let formData = new FormData($("#consultation-form")[0]);
+        
+        // Afficher le loading
+        $("#loading").show();
 
         $.ajax({
-            url: "{{ route('consultation.store') }}",  // Store consultation details
+            url: "{{ route('consultation.store') }}",
             type: "POST",
             data: formData,
             processData: false,
@@ -108,18 +116,23 @@ $(document).ready(function () {
                 "X-CSRF-TOKEN": "{{ csrf_token() }}"
             },
             success: function (response) {
+                $("#loading").hide(); // Cacher le loading après la réponse
+
                 if (response.success) {
                     let consultationId = response.consultation_id;
                     if (consultationId) {
-                        // Proceed with Stripe Checkout session
+                        $("#loading").show(); // Afficher le loading pour Stripe
+
                         $.ajax({
-                            url: "{{ route('consultation.createCheckoutSession') }}",  // Use the correct route
+                            url: "{{ route('consultation.createCheckoutSession') }}",
                             type: "POST",
                             data: { consultation_id: consultationId },
                             headers: {
                                 "X-CSRF-TOKEN": "{{ csrf_token() }}"
                             },
                             success: function (session) {
+                                $("#loading").hide(); // Cacher le loading avant la redirection
+
                                 if (session.id) {
                                     let stripe = Stripe("{{ env('STRIPE_KEY') }}");
                                     stripe.redirectToCheckout({ sessionId: session.id })
@@ -133,6 +146,7 @@ $(document).ready(function () {
                                 }
                             },
                             error: function (xhr, status, error) {
+                                $("#loading").hide();
                                 console.error("Erreur lors de la récupération de la session Stripe:", error);
                             }
                         });
@@ -144,6 +158,7 @@ $(document).ready(function () {
                 }
             },
             error: function (xhr, status, error) {
+                $("#loading").hide();
                 console.error("Erreur lors de la soumission du formulaire:", error);
                 alert("Une erreur est survenue lors de la soumission du formulaire");
             }

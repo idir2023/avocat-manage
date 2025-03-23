@@ -18,6 +18,14 @@
     line-height: 1.9;
     color: #333;
 }
+#loading {
+    display: none;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
 
 h1.display-3 {
     font-family: 'Playfair Display', serif;
