@@ -269,14 +269,6 @@ p {
     });
 </script>
 
-
-
-
-    <!-- Appointment Start -->
-   @include('clients.layouts.consultations')
-    <!-- Appointment End -->
-
-
   <!-- Pourquoi nous choisir Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">

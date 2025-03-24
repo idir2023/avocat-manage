@@ -19,7 +19,9 @@ class Consultation extends Model
         'probleme',
         'fichier',
         'paiement_status',
+        'reply_text',
         'user_id',
+        'pack_id',
     ];
 
     // Accesseur pour récupérer le fichier avec le bon chemin (si stocké dans storage/app/public/consultations)
@@ -27,4 +29,9 @@ class Consultation extends Model
     {
         return $this->fichier ? asset('storage/' . $this->fichier) : null;
     }
+    
+    public function pack() {
+        return $this->belongsTo(Pack::class);
+    }
+    
 }

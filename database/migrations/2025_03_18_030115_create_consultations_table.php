@@ -19,7 +19,9 @@ return new class extends Migration
             $table->text('probleme');
             $table->string('fichier')->nullable();  
             $table->enum('paiement_status', ['en attente', 'payé'])->default('en attente');
+            $table->text('reply_text')->nullable();
             $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('pack_id')->nullable()->constrained()->nullOnDelete();
             $table->timestamps();
         });
     }

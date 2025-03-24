@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
-use App\Http\Controllers\StripeController;
 
 // Routes publiques
 Route::get('/', [ClientController::class, 'home'])->name('home');
@@ -21,6 +20,7 @@ Route::get('/about', [ClientController::class, 'about'])->name('about');
 Route::get('/cons', [ClientController::class, 'cons'])->name('cons');
 Route::get('/actualite', [ClientController::class, 'actualite'])->name('actualite');
 Route::get('/expertise', [ClientController::class, 'expertise'])->name('expertise');
+Route::get('/cons/{id}', [ClientController::class, 'showForm'])->name('formConsultation');
 
 // Formulaire de contact
 Route::get('/contact', [ClientController::class, 'contact'])->name('contact');
@@ -33,7 +33,8 @@ Route::post('/consultation/store', [ConsultationController::class, 'storeConsult
 Route::post('/consultation/create-checkout-session', [ConsultationController::class, 'createCheckoutSession'])->name('consultation.createCheckoutSession');
 Route::get('/stripe/success/{consultation_id}', [ConsultationController::class, 'success'])->name('stripe.success');
 Route::get('/stripe/cancel', [ConsultationController::class, 'cancel'])->name('stripe.cancel');
- 
+ // web.php (routes file)
+
 // End consultation
 
 // Routes protégées (auth requise)
@@ -44,6 +45,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // Ressources CRUD (admin only routes)
     Route::middleware('admin')->group(function () {
+        Route::post('/consultations/{id}/reply', [ConsultationController::class, 'reply'])->name('consultations.reply');
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::resources([
             'parametres' => ParametreController::class,

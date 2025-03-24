@@ -6,6 +6,7 @@ use App\Models\Consultation;
 use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
+use App\Models\Pack;
 
 class ConsultationController extends Controller
 {
@@ -38,6 +39,8 @@ class ConsultationController extends Controller
             'telephone' => 'nullable|string|max:50',
             'probleme' => 'required|string',
             'fichier' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:2048',
+            'pack_id' => 'nullable|exists:packs,id',
+
         ]);
 
         // Stocker le fichier si présent
@@ -51,6 +54,7 @@ class ConsultationController extends Controller
             'probleme' => $request->probleme,
             'fichier' => $fichierPath,
             'paiement_status' => 'en attente',
+            'pack_id' => $request->pack_id,
             'user_id' => auth()->id(),
         ]);
 
@@ -64,15 +68,20 @@ class ConsultationController extends Controller
     /**
      * Create a Stripe Checkout session.
      */
+   
     public function createCheckoutSession(Request $request)
     {
         try {
             // Validate the consultation ID in the request
             $consultationId = $request->input('consultation_id');
             $consultation = Consultation::findOrFail($consultationId);
-    
+            $pack = Pack::findOrFail($consultation->pack_id);
+        
             // Set up Stripe API key
             Stripe::setApiKey(env('STRIPE_SECRET'));
+    
+            // Convert price to cents (assuming $pack->price is in Dirhams)
+            $amountInCents = $pack->price * 100; // Convert to cents
     
             // Create a Stripe checkout session
             $session = \Stripe\Checkout\Session::create([
@@ -80,11 +89,11 @@ class ConsultationController extends Controller
                 'line_items' => [
                     [
                         'price_data' => [
-                            'currency' => 'eur',
+                            'currency' => 'eur',  // Assuming you want to use EUR for the transaction
                             'product_data' => [
                                 'name' => 'Consultation Médicale',
                             ],
-                            'unit_amount' => 5000, // 50 EUR (in cents)
+                            'unit_amount' => $amountInCents, // Amount in cents
                         ],
                         'quantity' => 1,
                     ],
@@ -98,10 +107,11 @@ class ConsultationController extends Controller
             return response()->json(['id' => $session->id]);
     
         } catch (\Exception $e) {
+            // Return error message
             return response()->json(['error' => 'Erreur lors de la création de la session Stripe: ' . $e->getMessage()]);
         }
     }
-
+    
     /**
      * Success after payment.
      */
@@ -110,7 +120,7 @@ class ConsultationController extends Controller
         // Mettre à jour le statut du paiement dans la base de données
         Consultation::where('id', $consultation_id)->update(['paiement_status' => 'payé']);
         
-        return redirect()->route('home')
+        return redirect()->route('cons')
                          ->with('success', 'Paiement effectué avec succès.');
     }
 
@@ -129,6 +139,20 @@ class ConsultationController extends Controller
     {
         return view('admins.consultations.show', compact('consultation'));
     }
+    public function reply(Request $request, $id)
+{
+    $consultation = Consultation::findOrFail($id);
+    
+    // Store the reply in your database
+    $consultation->update([
+         'reply_text' => $request->input('reply'),
+    ]);
+
+    // return response()->json(['message' => 'Réponse envoyée avec succès.']);
+    return redirect()->route('consultations.index')->with('success', 'Réponse envoyée avec succès');
+
+}
+
  
     public function destroy(Consultation $consultation)
     {

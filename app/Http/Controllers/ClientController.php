@@ -9,6 +9,7 @@ use App\Models\Expertise;
  use App\Models\Actualite;
 use App\Models\Parametre;
 use App\Models\Consultation;
+use App\Models\Pack;
 
 class ClientController extends Controller
 {
@@ -22,7 +23,8 @@ class ClientController extends Controller
     }
     public function cons()
     {
-        return view('clients.cons');
+        $packs = Pack::all();
+        return view('clients.cons', compact('packs'));
     }
     public function actualite()
     {
@@ -69,5 +71,13 @@ class ClientController extends Controller
     return redirect()->back()->with('success', 'Your message has been sent successfully!');
    }
  
+   public function showForm($id)
+    {
+        // Retrieve the consultation based on the provided ID
+        $pack = Pack::findOrFail($id);
+
+        // Return the form view and pass the consultation data to it
+        return view('clients.form_consultation', compact('pack'));
+    }
 
 }

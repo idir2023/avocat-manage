@@ -10,6 +10,7 @@
         </div>
         <div class="card-body">
             <p><strong>Nom :</strong> {{ $consultation->nom }} {{ $consultation->prenom }}</p>
+            <p><strong>Pack :</strong> {{ $consultation->pack->name }}</p>
             <p><strong>Email :</strong> {{ $consultation->email }}</p>
             <p><strong>Téléphone :</strong> {{ $consultation->telephone ?? 'N/A' }}</p>
             <p><strong>Problème :</strong> {{ $consultation->probleme }}</p>

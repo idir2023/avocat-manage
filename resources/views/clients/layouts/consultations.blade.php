@@ -70,6 +70,7 @@
                                         @error('fichier') <div class="text-danger">{{ $message }}</div> @enderror
                                     </div>
                                 </div>
+                                <input type="text" name="pack_id" value="{{ $pack->id }}" hidden>
 
                                 <div>
                                     <button id="checkout-button" class="btn btn-primary btn-block border-0 py-3">

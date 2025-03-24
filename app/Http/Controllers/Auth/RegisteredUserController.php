@@ -75,7 +75,7 @@ class RegisteredUserController extends Controller
     }
 
     // If not an admin, redirect to home
-    return redirect(route('home', absolute: false)); // Adjust the home route as necessary
+    return redirect(route('cons', absolute: false)); // Adjust the home route as necessary
 }
 
 }
