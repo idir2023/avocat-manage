@@ -6,12 +6,15 @@ $settings = \App\Models\Parametre::first();
         <div class="col-lg-3 bg-secondary d-none d-lg-block">
             <a href="{{ route('home') }}"
                 class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                <h1
+             
+         
+                <h1 
                     class="m-0 text-4xl font-extrabold text-primary text-uppercase leading-tight text-center shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
                     <span
                         class="text-6xl text-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 rounded-lg">HB</span>
-                    <span class="text-4xl text-white"> Avocat</span>
+                   
                 </h1>
+
 
             </a>
         </div>
