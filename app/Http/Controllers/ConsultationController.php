@@ -25,6 +25,11 @@ class ConsultationController extends Controller
         
         return view('admins.consultations.index', compact('consultations'));
     }
+    public function MesConsulation()
+    {
+        $consultations = Consultation::where('user_id', auth()->id())->get();
+         return view('clients.Mesconsultations', compact('consultations'));
+    }
     
     public function storeConsultation(Request $request)
     {

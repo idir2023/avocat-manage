@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 
+
+
 // Routes publiques
 Route::get('/', [ClientController::class, 'home'])->name('home');
 Route::get('/about', [ClientController::class, 'about'])->name('about');
@@ -33,18 +35,18 @@ Route::post('/consultation/store', [ConsultationController::class, 'storeConsult
 Route::post('/consultation/create-checkout-session', [ConsultationController::class, 'createCheckoutSession'])->name('consultation.createCheckoutSession');
 Route::get('/stripe/success/{consultation_id}', [ConsultationController::class, 'success'])->name('stripe.success');
 Route::get('/stripe/cancel', [ConsultationController::class, 'cancel'])->name('stripe.cancel');
+Route::get('/consultation/show', [ConsultationController::class, 'MesConsulation'])->name('consultation.show');
+
  // web.php (routes file)
 
 // End consultation
 
 // Routes protégées (auth requise)
 Route::middleware(['auth', 'verified'])->group(function () {
-    
-    // Consultation resource route
-    Route::resource('consultations', ConsultationController::class);
 
     // Ressources CRUD (admin only routes)
     Route::middleware('admin')->group(function () {
+        Route::resource('consultations', ConsultationController::class);
         Route::post('/consultations/{id}/reply', [ConsultationController::class, 'reply'])->name('consultations.reply');
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::resources([

@@ -4,46 +4,20 @@ $settings = \App\Models\Parametre::first();
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 bg-secondary d-none d-lg-block">
-            <a href="{{route('home')}}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                <h1 class="m-0 text-4xl font-extrabold text-primary text-uppercase leading-tight text-center shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
-                    <span class="text-6xl text-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 rounded-lg">HB</span>
+            <a href="{{ route('home') }}"
+                class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <h1
+                    class="m-0 text-4xl font-extrabold text-primary text-uppercase leading-tight text-center shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                    <span
+                        class="text-6xl text-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 rounded-lg">HB</span>
                     <span class="text-4xl text-white"> Avocat</span>
                 </h1>
-                                
+
             </a>
         </div>
         <div class="col-lg-9">
-            {{-- <div class="row bg-white border-bottom d-none d-lg-flex">
-                <div class="col-lg-7 text-left">
-                    <div class="h-100 d-inline-flex align-items-center py-2 px-3">
-                        <i class="fa fa-envelope text-primary mr-2"></i>
-                        <small>{{ $settings->email ?? 'info@example.com' }}</small>
-                    </div>
-                    <div class="h-100 d-inline-flex align-items-center py-2 px-2">
-                        <i class="fa fa-phone-alt text-primary mr-2"></i>
-                        <small>{{ $settings->telephone ?? '+012 345 6789' }}</small>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-right">
-                    <div class="d-inline-flex align-items-center p-2">
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->facebook ?? '#' }}">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->twitter ?? '#' }}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->linkedin ?? '#' }}">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="{{ $settings->instagram ?? '#' }}">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div> --}}
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                <a href="{{route('home')}}" class="navbar-brand d-block d-lg-none">
+                <a href="{{ route('home') }}" class="navbar-brand d-block d-lg-none">
                     <h1 class="m-0 display-4 text-primary text-uppercase">HB AVOCAT</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -51,33 +25,46 @@ $settings = \App\Models\Parametre::first();
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="{{route('home')}}" class="nav-item nav-link active">Accueil</a>
-                        <a href="{{route('about')}}" class="nav-item nav-link">Notre Histoire</a>
+                        <a href="{{ route('home') }}" class="nav-item nav-link active">Accueil</a>
+                        <a href="{{ route('about') }}" class="nav-item nav-link">Notre Histoire</a>
                         {{-- <a href="{{route('actualite')}}" class="nav-item nav-link">Actualité</a> --}}
-                        <a href="{{route('expertise')}}" class="nav-item nav-link">Nos Domaines</a>
-                        <a href="{{route('cons')}}" class="nav-item nav-link">Consultation</a>
-                      
-                        <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        <a href="{{ route('expertise') }}" class="nav-item nav-link">Nos Domaines</a>
+                        <a href="{{ route('cons') }}" class="nav-item nav-link">Consultation</a>
+
+                        <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
                     </div>
-                    @if(auth()->check())
-                    <a href="{{ route('logout') }}" class="btn btn-primary mr-3 d-none d-lg-block"
-                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                
-                    @if(auth()->user()->is_admin)
-                        <a href="{{ route('dashboard') }}" class="btn btn-primary mr-3 d-none d-lg-block">Dashboard</a>
+
+                    @if (auth()->check())
+                        <!-- Logout Button -->
+                        <a href="{{ route('logout') }}"
+                            class="btn btn-primary mr-3 d-block bg-blue-500 text-white hover:bg-blue-600 rounded-lg py-2 px-4 mb-3 sm:mb-0"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+
+                        <!-- Admin Dashboard Link (Desktop Only) -->
+                        @if (auth()->user()->is_admin)
+                            <a href="{{ route('dashboard') }}"
+                                class="btn btn-primary mr-3 d-block bg-green-500 text-white hover:bg-green-600 rounded-lg py-2 px-4 mb-3 sm:mb-0">
+                                Dashboard
+                            </a>
+                        @else
+                            <!-- Consultation Link (Mobile Friendly) -->
+                            <a href="{{ route('consultation.show') }}"
+                                class="btn btn-primary mr-3 d-block bg-yellow-500 text-white hover:bg-yellow-600 rounded-lg py-2 px-4 mb-3 sm:mb-0">
+                                See my consultations
+                            </a>
+                        @endif
                     @else
-                        <a href="{{ route('consultations.index') }}" class="btn btn-primary mr-3 d-none d-lg-block">See my consultations</a>
+                        <a href="{{ route('login') }}"
+                            class="btn btn-primary mr-3 d-block bg-indigo-500 text-white hover:bg-indigo-600 rounded-lg py-2 px-4 mb-3 sm:mb-0">
+                            Sign up
+                        </a>
                     @endif
-                @else
-                    <a href="{{ route('login') }}" class="btn btn-primary mr-3 d-none d-lg-block">Sign up</a>
-                @endif
-                
-                
+
                 </div>
             </nav>
         </div>
