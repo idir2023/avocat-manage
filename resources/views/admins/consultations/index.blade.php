@@ -33,11 +33,7 @@
                                     <th>Pack</th>
                                     <th>Email</th>
                                     <th>Téléphone</th>
-                                    @if (auth()->user()->is_admin)
-                                        <th>Problème</th>
-                                    @else
-                                        <th>Réponse</th>
-                                    @endif
+                                    <th>Problème</th>
                                     <th>Fichier</th>
                                     <th>Paiement</th>
                                     <th>Actions</th>
@@ -51,16 +47,7 @@
                                         <td>{{ $consultation->pack->name }}</td>
                                         <td>{{ $consultation->email }}</td>
                                         <td>{{ $consultation->telephone ?? 'N/A' }}</td>
-                                        @if (auth()->user()->is_admin)
-                                            <td>{{ Str::limit($consultation->probleme, 50) }}</td>
-                                        @else
-                                            <td>
-                                                <button class="btn btn-info btn-sm"
-                                                    onclick="showReplyAlert('{{ addslashes($consultation->reply_text ?? 'Pas de réponse encore') }}')">
-                                                    <i class="fas fa-comment"></i> Voir réponse
-                                                </button>
-                                            </td>
-                                        @endif
+                                        <td>{{ Str::limit($consultation->probleme, 50) }}</td>
                                         <td>
                                             @if ($consultation->fichier)
                                                 <a href="{{ asset('storage/' . $consultation->fichier) }}" target="_blank"
@@ -82,24 +69,21 @@
                                                 class="btn btn-sm btn-info">
                                                 <i class="fas fa-eye"></i> Détails
                                             </a>
-                                            @if (auth()->user()->is_admin)
-                                                <button type="button" class="btn btn-sm btn-danger delete-btn"
-                                                    data-id="{{ $consultation->id }}">
-                                                    <i class="fas fa-trash"></i> Supprimer
-                                                </button>
-                                                <form id="delete-form-{{ $consultation->id }}"
-                                                    action="{{ route('consultations.destroy', $consultation->id) }}"
-                                                    method="POST" class="d-none">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                </form>
-
-                                                <!-- Button to trigger the reply modal -->
-                                                <button type="button" class="btn btn-sm btn-warning reply-btn"
-                                                    data-id="{{ $consultation->id }}">
-                                                    <i class="fas fa-reply"></i> Répondre
-                                                </button>
-                                            @endif
+                                            <button type="button" class="btn btn-sm btn-danger delete-btn"
+                                                data-id="{{ $consultation->id }}">
+                                                <i class="fas fa-trash"></i> Supprimer
+                                            </button>
+                                            <form id="delete-form-{{ $consultation->id }}"
+                                                action="{{ route('consultations.destroy', $consultation->id) }}"
+                                                method="POST" class="d-none">
+                                                @csrf
+                                                @method('DELETE')
+                                            </form>
+                                            <!-- Button to trigger the reply modal -->
+                                            <button type="button" class="btn btn-sm btn-warning reply-btn"
+                                                data-id="{{ $consultation->id }}">
+                                                <i class="fas fa-reply"></i> Répondre
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -141,7 +125,6 @@
 
 @section('scripts')
     <!-- SweetAlert CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function showReplyAlert(replyText) {
             if (replyText === 'Pas de réponse encore') {
