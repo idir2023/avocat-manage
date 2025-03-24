@@ -10,6 +10,34 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('clients/img/hb.jpeg') }}">
 
     @include('clients.layouts.style')
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            font-size: 18px;
+            color: #333;
+        }
+        h1.display-3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 52px;
+        color: #2c2c2c;
+    }
+
+    h2,
+    h3,
+    .display-3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 40px;
+        color: #3a3a3a;
+    }
+    p {
+        font-size: 20px;
+    }
+
+    </style>
 </head>
 
 <body>
@@ -20,11 +48,11 @@
     <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">Formulaire de Consultation</h3>
+                <h3 class="display-3 text-white text-uppercase">Formulaire de Consultations</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="{{ route('home') }}">Accueil</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Consultation</p>
+                    <p class="m-0 text-uppercase">Consultations</p>
                 </div>
             </div>
         </div>
