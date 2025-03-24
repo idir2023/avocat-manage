@@ -1,6 +1,6 @@
 @extends('admins.layouts.master')
-@section('title', 'Expertises')
-@section('title_2', 'Manage Expertises')
+@section('title', __('messages.expertises'))
+@section('title_2', __('messages.manage_expertises'))
 
 @section('content')
     <div class="content-wrapper">
@@ -8,7 +8,7 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Expertises</h4>
+                        <h4 class="card-title">{{ __('messages.expertises') }}</h4>
 
                         <!-- Success Alert -->
                         @if (session('success'))
@@ -26,17 +26,17 @@
 
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#createModal">
-                            Add New Expertise
+                            {{ __('messages.add_new_expertise') }}
                         </button>
 
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th> Name </th>
-                                        <th> Logo </th>
-                                        <th> Description </th>
-                                        <th> Actions </th>
+                                        <th>{{ __('messages.name') }}</th>
+                                        <th>{{ __('messages.logo') }}</th>
+                                        <th>{{ __('messages.description') }}</th>
+                                        <th>{{ __('messages.actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,20 +45,20 @@
                                             <td> {{ $expertise->nom }} </td>
                                             <td>
                                                 @if ($expertise->logo)
-                                                <img src="{{ Storage::url($expertise->logo) }}" alt="Logo" width="100">
+                                                    <img src="{{ Storage::url($expertise->logo) }}" alt="Logo" width="100">
                                                 @else
-                                                    No Logo
+                                                    {{ __('messages.no_logo') }}
                                                 @endif
                                             </td>
                                             <td> {{ Str::limit($expertise->description, 50) }} </td>
                                             <td>
-                                                <!-- Bouton pour ouvrir le modal d'édition -->
+                                                <!-- Edit Button -->
                                                 <button type="button" class="btn btn-warning btn-icon-text"
                                                     data-toggle="modal" data-target="#editModal{{ $expertise->id }}">
-                                                    <i class="mdi mdi-pencil-outline btn-icon-prepend"></i> Edit
+                                                    <i class="mdi mdi-pencil-outline btn-icon-prepend"></i> {{ __('messages.edit') }}
                                                 </button>
 
-                                                <!-- Modal d'édition -->
+                                                <!-- Edit Modal -->
                                                 <div class="modal fade" id="editModal{{ $expertise->id }}" tabindex="-1"
                                                     role="dialog" aria-labelledby="editModalLabel{{ $expertise->id }}"
                                                     aria-hidden="true">
@@ -66,7 +66,7 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h5 class="modal-title"
-                                                                    id="editModalLabel{{ $expertise->id }}">Edit Expertise
+                                                                    id="editModalLabel{{ $expertise->id }}">{{ __('messages.edit_expertise') }}
                                                                 </h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
@@ -79,42 +79,41 @@
                                                                 @method('PUT')
                                                                 <div class="modal-body">
                                                                     <div class="form-group">
-                                                                        <label for="nom">Name</label>
+                                                                        <label for="nom">{{ __('messages.name') }}</label>
                                                                         <input type="text" class="form-control"
                                                                             id="nom" name="nom"
                                                                             value="{{ $expertise->nom }}" required>
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="logo">Logo</label>
+                                                                        <label for="logo">{{ __('messages.logo') }}</label>
                                                                         <input type="file" class="form-control"
                                                                             id="logo" name="logo">
                                                                         @if ($expertise->logo)
-                                                                            <small class="text-muted">Current
-                                                                                logo:</small><br>
+                                                                            <small class="text-muted">{{ __('messages.current_logo') }}:</small><br>
                                                                             <img src="{{ asset('storage/' . $expertise->logo) }}"
                                                                                 alt="Current Logo" width="80">
                                                                         @endif
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="description">Description</label>
+                                                                        <label for="description">{{ __('messages.description') }}</label>
                                                                         <textarea class="form-control" id="description" name="description" rows="4" required>{{ $expertise->description }}</textarea>
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary btn-sm"
-                                                                        data-dismiss="modal">Close</button>
+                                                                        data-dismiss="modal">{{ __('messages.close') }}</button>
                                                                     <button type="submit"
-                                                                        class="btn btn-info btn-sm">Update</button>
+                                                                        class="btn btn-info btn-sm">{{ __('messages.update') }}</button>
                                                                 </div>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <!-- Bouton pour supprimer -->
+                                                <!-- Delete Button -->
                                                 <button type="button" class="btn btn-danger btn-icon-text"
                                                     onclick="confirmDelete({{ $expertise->id }})">
-                                                    <i class="mdi mdi-delete-outline btn-icon-prepend"></i> Delete
+                                                    <i class="mdi mdi-delete-outline btn-icon-prepend"></i> {{ __('messages.delete') }}
                                                 </button>
                                                 <form id="deleteForm{{ $expertise->id }}"
                                                     action="{{ route('expertises.destroy', $expertise->id) }}"
@@ -125,11 +124,10 @@
                                             </td>
                                         </tr>
                                     @endforeach
-
                                 </tbody>
                             </table>
                             <div class="d-flex justify-content-center">
-                                {!! $expertises->links('pagination::bootstrap-5')  !!}
+                                {!! $expertises->links('pagination::bootstrap-5') !!}
                             </div>
                         </div>
                     </div>
@@ -144,7 +142,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createModalLabel">Add New Expertise</h5>
+                    <h5 class="modal-title" id="createModalLabel">{{ __('messages.add_new_expertise') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -153,21 +151,21 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="nom">Name</label>
+                            <label for="nom">{{ __('messages.name') }}</label>
                             <input type="text" class="form-control" id="nom" name="nom" required>
                         </div>
                         <div class="form-group">
-                            <label for="logo">Logo</label>
+                            <label for="logo">{{ __('messages.logo') }}</label>
                             <input type="file" class="form-control" id="logo" name="logo">
                         </div>
                         <div class="form-group">
-                            <label for="description">Description</label>
+                            <label for="description">{{ __('messages.description') }}</label>
                             <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-info btn-sm">Save</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{{ __('messages.close') }}</button>
+                        <button type="submit" class="btn btn-info btn-sm">{{ __('messages.save') }}</button>
                     </div>
                 </form>
             </div>
@@ -179,12 +177,12 @@
     <script>
         function confirmDelete(expertiseId) {
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '{{ __('messages.are_you_sure') }}',
+                text: '{{ __('messages.this_action_is_irreversible') }}',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: '{{ __('messages.yes_delete') }}',
+                cancelButtonText: '{{ __('messages.no_cancel') }}',
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {

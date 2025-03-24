@@ -8,11 +8,11 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">User Management</h4>
+                    <h4 class="card-title">{{ __('messages.user_management') }}</h4>
 
                     <!-- Add User Button -->
                     <button type="button" class="btn btn-success btn-sm mb-3" data-toggle="modal" data-target="#addUserModal">
-                        <i class="mdi mdi-plus-circle"></i> Add User
+                        <i class="mdi mdi-plus-circle"></i> {{ __('messages.add_user') }}
                     </button>
 
                     <!-- Success Alert -->
@@ -30,9 +30,9 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Actions</th>
+                                    <th>{{ __('messages.name') }}</th>
+                                    <th>{{ __('messages.email') }}</th>
+                                    <th>{{ __('messages.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,12 +47,12 @@
                                         <td>
                                             <!-- Edit Button -->
                                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editModal{{ $user->id }}">
-                                                <i class="mdi mdi-pencil-outline"></i> Edit
+                                                <i class="mdi mdi-pencil-outline"></i> {{ __('messages.edit_user') }}
                                             </button>
 
                                             <!-- Delete Button -->
                                             <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ $user->id }})">
-                                                <i class="mdi mdi-delete-outline"></i> Delete
+                                                <i class="mdi mdi-delete-outline"></i> {{ __('messages.delete_user') }}
                                             </button>
 
                                             <!-- Hidden Delete Form -->
@@ -68,7 +68,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title">Edit User</h5>
+                                                    <h5 class="modal-title">{{ __('messages.edit_user') }}</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -78,19 +78,18 @@
                                                     @method('PATCH') <!-- This overrides the form's method to PATCH -->
                                                     <div class="modal-body">
                                                         <div class="form-group">
-                                                            <label for="name">Name</label>
+                                                            <label for="name">{{ __('messages.name') }}</label>
                                                             <input type="text" class="form-control" name="name" value="{{ $user->name }}" required>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label for="email">Email</label>
+                                                            <label for="email">{{ __('messages.email') }}</label>
                                                             <input type="email" class="form-control" name="email" value="{{ $user->email }}" required>
                                                         </div>
-                                                    
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-info btn-sm">Save changes</button>
+                                                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{{ __('messages.close') }}</button>
+                                                        <button type="submit" class="btn btn-info btn-sm">{{ __('messages.save_changes') }}</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -98,7 +97,7 @@
                                     </div>
                                 @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">No users found.</td>
+                                        <td colspan="4" class="text-center">{{ __('messages.no_users_found') }}</td>
                                     </tr>
                                 @endforelse
                             </tbody>
@@ -120,7 +119,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add New User</h5>
+                <h5 class="modal-title">{{ __('messages.add_new_user') }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -129,23 +128,23 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">{{ __('messages.name') }}</label>
                         <input type="text" class="form-control" name="name" required>
                     </div>
-              
+
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">{{ __('messages.email') }}</label>
                         <input type="email" class="form-control" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="password">Password</label>
+                        <label for="password">{{ __('messages.password') }}</label>
                         <input type="password" class="form-control" name="password" required>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-success btn-sm">Add User</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">{{ __('messages.close') }}</button>
+                    <button type="submit" class="btn btn-success btn-sm">{{ __('messages.add_user') }}</button>
                 </div>
             </form>
         </div>
@@ -158,12 +157,12 @@
 <script>
     function confirmDelete(userId) {
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: '{{ __("messages.are_you_sure") }}',
+            text: '{{ __("messages.you_wont_be_able_to_revert") }}',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Yes, delete it!',
-            cancelButtonText: 'No, cancel!',
+            confirmButtonText: '{{ __("messages.yes_delete_it") }}',
+            cancelButtonText: '{{ __("messages.no_cancel") }}',
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {

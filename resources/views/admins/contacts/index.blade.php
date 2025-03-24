@@ -1,6 +1,6 @@
 @extends('admins.layouts.master')
-@section('title', 'Contacts')
-@section('title_2', 'Manage Contacts')
+@section('title', __('messages.contacts_message'))
+@section('title_2', __('messages.manage_contacts'))
 
 @section('content')
 
@@ -9,7 +9,7 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Contacts Message</h4>
+                        <h4 class="card-title">{{ __('messages.contacts_message') }}</h4>
 
                         <!-- Success Alert -->
                         @if (session('success'))
@@ -29,12 +29,12 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th> Name </th>
-                                        <th> Prenom </th>
-                                        <th> Telephone </th>
-                                        <th> Email </th>
-                                        <th> Message </th>
-                                        <th> Actions </th>
+                                        <th> {{ __('messages.name') }} </th>
+                                        <th> {{ __('messages.prenom') }} </th>
+                                        <th> {{ __('messages.telephone') }} </th>
+                                        <th> {{ __('messages.email') }} </th>
+                                        <th> {{ __('messages.message') }} </th>
+                                        <th> {{ __('messages.actions') }} </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,19 +49,19 @@
                                                     {{ $contact->email }}
                                                 </a>
                                             </td>                                            
-                                           
+
                                             <td> {{ $contact->message }} </td>
                                             <td>
                                                 <!-- Edit Button -->
                                                 <button type="button" class="btn btn-warning btn-icon-text"
                                                     data-toggle="modal" data-target="#editModal{{ $contact->id }}">
-                                                    <i class="mdi mdi-pencil-outline btn-icon-prepend"></i> Edit
+                                                    <i class="mdi mdi-pencil-outline btn-icon-prepend"></i> {{ __('messages.edit') }}
                                                 </button>
 
                                                 <!-- Delete Button with SweetAlert2 -->
                                                 <button type="button" class="btn btn-danger btn-icon-text"
                                                     onclick="confirmDelete({{ $contact->id }})">
-                                                    <i class="mdi mdi-delete-outline btn-icon-prepend"></i> Delete
+                                                    <i class="mdi mdi-delete-outline btn-icon-prepend"></i> {{ __('messages.delete') }}
                                                 </button>
 
                                                 <!-- Delete Form (hidden) -->
@@ -81,8 +81,8 @@
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="editModalLabel{{ $contact->id }}">Edit
-                                                            Contact</h5>
+                                                        <h5 class="modal-title" id="editModalLabel{{ $contact->id }}">{{ __('messages.edit') }}
+                                                            {{ __('messages.contact') }}</h5>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
@@ -94,36 +94,35 @@
                                                         @method('PUT')
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label for="name">Name</label>
+                                                                <label for="name">{{ __('messages.name') }}</label>
                                                                 <input type="text" class="form-control" id="name"
                                                                     name="name" value="{{ $contact->nom }}" required>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="prenom">Prenom</label>
+                                                                <label for="prenom">{{ __('messages.prenom') }}</label>
                                                                 <input type="text" class="form-control" id="prenom"
                                                                     name="prenom" value="{{ $contact->prenom }}" required>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="telephone">Telephone</label>
+                                                                <label for="telephone">{{ __('messages.telephone') }}</label>
                                                                 <input type="text" class="form-control" id="telephone"
                                                                     name="telephone" value="{{ $contact->telephone }}"
                                                                     required>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="email">Email</label>
+                                                                <label for="email">{{ __('messages.email') }}</label>
                                                                 <input type="email" class="form-control" id="email"
                                                                     name="email" value="{{ $contact->email }}" required>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="message">Message</label>
+                                                                <label for="message">{{ __('messages.message') }}</label>
                                                                 <textarea class="form-control" id="message" name="message" rows="4" required>{{ $contact->message }}</textarea>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary btn-sm"
-                                                                data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-info btn-sm">Save
-                                                                changes</button>
+                                                                data-dismiss="modal">{{ __('messages.close') }}</button>
+                                                            <button type="submit" class="btn btn-info btn-sm">{{ __('messages.save_changes') }}</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -131,7 +130,7 @@
                                         </div>
                                     @empty
                                         <tr>
-                                            <td colspan="6" class="text-center">No messages found.</td>
+                                            <td colspan="6" class="text-center">{{ __('messages.no_messages') }}</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
@@ -156,12 +155,12 @@
         // Delete confirmation using SweetAlert2
         function confirmDelete(contactId) {
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: '{{ __('messages.are_you_sure') }}',
+                text: '{{ __('messages.delete_warning') }}',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
+                confirmButtonText: '{{ __('messages.confirm_delete') }}',
+                cancelButtonText: '{{ __('messages.cancel') }}',
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {

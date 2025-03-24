@@ -18,7 +18,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('consultations.index') }}" aria-expanded="false">
                             <i class="mdi mdi-calendar-check"></i>
-                            <span class="hide-menu">Consultations</span>
+                            <span class="hide-menu">{{ __('messages.consultations') }}</span>
                         </a>
                     </li>
 
@@ -26,7 +26,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('actualites.index') }}" aria-expanded="false">
                             <i class="mdi mdi-newspaper"></i>
-                            <span class="hide-menu">Actualités</span>
+                            <span class="hide-menu">{{ __('messages.actualites') }}</span>
                         </a>
                     </li>
 
@@ -34,21 +34,21 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('expertises.index') }}" aria-expanded="false">
                             <i class="mdi mdi-briefcase"></i>
-                            <span class="hide-menu">Nos Domaines</span>
+                            <span class="hide-menu">{{ __('messages.expertises') }}</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('contacts.index') }}" aria-expanded="false">
                             <i class="mdi mdi-email"></i>
-                            <span class="hide-menu">Contacts</span>
+                            <span class="hide-menu">{{ __('messages.contacts') }}</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('parametres.index') }}" aria-expanded="false">
                             <i class="mdi mdi-settings"></i>
-                            <span class="hide-menu">Paramètres</span>
+                            <span class="hide-menu">{{ __('messages.parametres') }}</span>
                         </a>
                     </li>
 
@@ -58,7 +58,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('consultations.index') }}" aria-expanded="false">
                             <i class="mdi mdi-calendar-check"></i>
-                            <span class="hide-menu">Ma Consultation</span>
+                            <span class="hide-menu">{{ __('messages.consultations') }}</span>
                         </a>
                     </li>
                 @endif

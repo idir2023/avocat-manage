@@ -1,4 +1,5 @@
+ 
 <footer class="footer text-center">
-    Designed and Developed by <a
-        href="https://falcondeev.vercel.app/">FalconDev</a>.
+    {{ __('messages.footer_text') }} <a href="https://falcondeev.vercel.app/">FalconDev</a>.
 </footer>
+

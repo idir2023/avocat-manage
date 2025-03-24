@@ -1,14 +1,14 @@
 @extends('admins.layouts.master')
 
-@section('title', 'Consultations')
-@section('title_2', 'Gérer les consultations')
+@section('title', __('messages.consultations'))
+@section('title_2', __('messages.gérer_les_consultations'))
 
 @section('content')
     <div class="content-wrapper">
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                    <h4>Liste des consultations</h4>
+                    <h4>{{ __('messages.liste_des_consultations') }}</h4>
                 </div>
 
                 <!-- Success Alert -->
@@ -28,15 +28,15 @@
                         <table class="table table-striped table-hover">
                             <thead class="bg-light">
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nom</th>
-                                    <th>Pack</th>
-                                    <th>Email</th>
-                                    <th>Téléphone</th>
-                                    <th>Problème</th>
-                                    <th>Fichier</th>
-                                    <th>Paiement</th>
-                                    <th>Actions</th>
+                                    <th>{{ __('messages.id') }}</th>
+                                    <th>{{ __('messages.nom') }}</th>
+                                    <th>{{ __('messages.pack') }}</th>
+                                    <th>{{ __('messages.email') }}</th>
+                                    <th>{{ __('messages.telephone') }}</th>
+                                    <th>{{ __('messages.probleme') }}</th>
+                                    <th>{{ __('messages.fichier') }}</th>
+                                    <th>{{ __('messages.paiement') }}</th>
+                                    <th>{{ __('messages.actions') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,16 +46,16 @@
                                         <td>{{ ucfirst($consultation->nom) }} {{ ucfirst($consultation->prenom) }}</td>
                                         <td>{{ $consultation->pack->name }}</td>
                                         <td>{{ $consultation->email }}</td>
-                                        <td>{{ $consultation->telephone ?? 'N/A' }}</td>
+                                        <td>{{ $consultation->telephone ?? __('messages.n_a') }}</td>
                                         <td>{{ Str::limit($consultation->probleme, 50) }}</td>
                                         <td>
                                             @if ($consultation->fichier)
                                                 <a href="{{ asset('storage/' . $consultation->fichier) }}" target="_blank"
                                                     class="text-primary">
-                                                    📂 Voir le fichier
+                                                    📂 {{ __('messages.voir_le_fichier') }}
                                                 </a>
                                             @else
-                                                Aucun fichier
+                                                {{ __('messages.aucun_fichier') }}
                                             @endif
                                         </td>
                                         <td>
@@ -67,11 +67,11 @@
                                         <td>
                                             <a href="{{ route('consultations.show', $consultation->id) }}"
                                                 class="btn btn-sm btn-info">
-                                                <i class="fas fa-eye"></i> Détails
+                                                <i class="fas fa-eye"></i> {{ __('messages.détails') }}
                                             </a>
                                             <button type="button" class="btn btn-sm btn-danger delete-btn"
                                                 data-id="{{ $consultation->id }}">
-                                                <i class="fas fa-trash"></i> Supprimer
+                                                <i class="fas fa-trash"></i> {{ __('messages.supprimer') }}
                                             </button>
                                             <form id="delete-form-{{ $consultation->id }}"
                                                 action="{{ route('consultations.destroy', $consultation->id) }}"
@@ -82,7 +82,7 @@
                                             <!-- Button to trigger the reply modal -->
                                             <button type="button" class="btn btn-sm btn-warning reply-btn"
                                                 data-id="{{ $consultation->id }}">
-                                                <i class="fas fa-reply"></i> Répondre
+                                                <i class="fas fa-reply"></i> {{ __('messages.répondre') }}
                                             </button>
                                         </td>
                                     </tr>
@@ -106,17 +106,17 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="replyModalLabel">Répondre à la Consultation</h5>
+                    <h5 class="modal-title" id="replyModalLabel">{{ __('messages.répondre_à_la_consultation') }}</h5>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <textarea id="replyText" class="form-control" rows="4" placeholder="Écrivez votre réponse ici..."></textarea>
+                    <textarea id="replyText" class="form-control" rows="4" placeholder="{{ __('messages.écrivez_votre_réponse_ici') }}"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary" id="submitReplyBtn">Envoyer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('messages.annuler') }}</button>
+                    <button type="button" class="btn btn-primary" id="submitReplyBtn">{{ __('messages.envoyer') }}</button>
                 </div>
             </div>
         </div>
@@ -127,20 +127,20 @@
     <!-- SweetAlert CDN -->
     <script>
         function showReplyAlert(replyText) {
-            if (replyText === 'Pas de réponse encore') {
+            if (replyText === '{{ __('messages.pas_de_réponse_encore') }}') {
                 // Show a warning if there's no reply
                 Swal.fire({
                     icon: 'warning',
-                    title: 'Pas de réponse encore',
+                    title: '{{ __('messages.pas_de_réponse_encore') }}',
                     text: replyText,
-                    confirmButtonText: 'Ok',
+                    confirmButtonText: '{{ __('messages.ok') }}',
                 });
             } else {
                 // Show the reply in a success-style alert
                 Swal.fire({
-                    title: 'Réponse',
+                    title: '{{ __('messages.réponse') }}',
                     text: replyText,
-                    confirmButtonText: 'Ok',
+                    confirmButtonText: '{{ __('messages.ok') }}',
                 });
             }
         }
@@ -150,14 +150,14 @@
             $('.delete-btn').on('click', function() {
                 let consultationId = $(this).data('id');
                 Swal.fire({
-                    title: "Êtes-vous sûr ?",
-                    text: "Cette action est irréversible !",
+                    title: "{{ __('messages.êtes_vous_sûr') }}",
+                    text: "{{ __('messages.cette_action_est_irréversible') }}",
                     icon: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#d33",
                     cancelButtonColor: "#3085d6",
-                    confirmButtonText: "Oui, supprimer !",
-                    cancelButtonText: "Annuler"
+                    confirmButtonText: "{{ __('messages.oui_supprimer') }}",
+                    cancelButtonText: "{{ __('messages.annuler') }}"
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $('#delete-form-' + consultationId).submit();
@@ -186,18 +186,18 @@
                             },
                             success: function(response) {
                                 $('#replyModal').modal('hide');
-                                Swal.fire('Réponse envoyée',
-                                    'Votre réponse a été envoyée avec succès.',
+                                Swal.fire('{{ __('messages.réponse_envoyée') }}',
+                                    '{{ __('messages.votre_réponse_a_été_envoyée') }}',
                                     'success');
                             },
                             error: function(error) {
-                                Swal.fire('Erreur',
-                                    'Une erreur est survenue lors de l\'envoi de votre réponse.',
+                                Swal.fire('{{ __('messages.erreur') }}',
+                                    '{{ __('messages.une_erreur_est_survenue') }}',
                                     'error');
                             }
                         });
                     } else {
-                        Swal.fire('Erreur', 'Veuillez entrer une réponse.', 'warning');
+                        Swal.fire('{{ __('messages.erreur') }}', '{{ __('messages.veillez_entrer_une_réponse') }}', 'warning');
                     }
                 });
             });
