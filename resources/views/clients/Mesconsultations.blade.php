@@ -152,8 +152,7 @@
                     <div class="bg-primary rounded" style="height: 200px;"></div>
 
                     <!-- Start Owl Carousel -->
-                    <div class="owl-carousel position-relative"
-                        style="margin-top: -100px; padding: 0 30px;">
+                    <div class="owl-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
                         @forelse($consultations as $consultation)
                             <div
                                 class="d-flex flex-column align-items-center text-center bg-white rounded pt-4 px-3 pb-4 pack-card">
@@ -175,18 +174,22 @@
                                         <i class="fas fa-times-circle text-danger"></i> Paiement Non Réussi
                                     @endif
                                 </p>
+                               
+                                <!-- Reply -->
 
+                                <div class="d-flex align-items-start">
+                                    <div class="p-2 bg-light border rounded-pill position-relative"
+                                        style="max-width: 500px; overflow: hidden;">
+                                        <i class="fas fa-reply"></i>
+                                        <span class="reply-text" id="reply-{{ $consultation->id }}">
+                                            {{ Str::limit($consultation->reply_text, 200) }}
+                                        </span>
+                                    </div>
+                                </div>
                                 <!-- File Link -->
                                 <a href="{{ asset('storage/' . $consultation->fichier) }}" target="_blank"
                                     class="text-primary">
                                     <i class="fas fa-file-pdf"></i> Voir le fichier
-                                </a>
-
-                                <!-- Reply Link -->
-
-                                <a href="javascript:void(0)" onclick="showReply('{{ $consultation->reply_text }}')"
-                                    class="text-primary">
-                                    <i class="fas fa-reply"></i> Voir la réponse
                                 </a>
                             </div>
                         @empty
@@ -212,8 +215,6 @@
     <!-- JavaScript Libraries -->
     @include('clients.layouts.scripts')
 
-    <!-- Include SweetAlert (make sure you have SweetAlert in your project) -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(document).ready(function() {
             // Initialize Owl Carousel
@@ -228,26 +229,6 @@
                 autoplayHoverPause: true // Pause on hover
             });
         });
-
-        function showReply(replyText) {
-            // Show the reply text in a SweetAlert pop-up
-            if (replyText) {
-                Swal.fire({
-                    title: 'Réponse:',
-                    text: replyText,
-                    icon: 'info',
-                    confirmButtonText: 'OK'
-                });
-            } else {
-                // Show a message if there is no reply
-                Swal.fire({
-                    title: 'Aucune réponse',
-                    text: 'Il n\'y a pas de réponse pour cette consultation.',
-                    icon: 'warning',
-                    confirmButtonText: 'OK'
-                });
-            }
-        }
     </script>
 </body>
 
