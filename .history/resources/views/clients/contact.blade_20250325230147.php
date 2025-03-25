@@ -203,16 +203,16 @@ p {
                         </div>
                     </div>
 
-                    <div class="d-flex"> 
+                    <!-- Point 3 -->
+                    <div class="d-flex">
                         <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
                             <h5 class="text-white m-0">03</h5>
                         </div>
                         <div class="ml-4">
-                            <h5>Accompagnement rigoureux et personnalisé</h5>
-                            <p class="m-0">Nous mettons en place une stratégie juridique claire et adaptée à votre situation, avec un suivi attentif à chaque étape.</p>
+                            <h5>Résultats concrets et efficaces</h5>
+                            <p class="m-0">Nous nous engageons à obtenir les résultats que vous méritez grâce à une stratégie claire, rigoureuse et orientée vers la réussite.</p>
                         </div>
                     </div>
-                    
 
                 </div>
             </div>

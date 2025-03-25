@@ -72,9 +72,6 @@ p {
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image.png') }}" alt="Cabinet Me Hanane Bounit">
                 </div>
-                {{-- <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image1.png') }}" alt="Cabinet Me Hanane Bounit">
-                </div> --}}
                 <div class="col-lg-7">
                     <h6 class="text-primary text-uppercase mb-3">À propos de nous</h6>
                     <h2 class="mb-4 text-dark">Le Cabinet HB Avocats, à votre écoute à Agadir</h2>

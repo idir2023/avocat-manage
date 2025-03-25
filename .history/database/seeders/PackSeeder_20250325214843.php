@@ -19,26 +19,21 @@ class PackSeeder extends Seeder
             'name' => 'Consultation Générale',
             'slug' => 'Droit du Travail & Droit de la Famille',
             'description' => 'Questions liées aux contrats de travail, licenciements, pensions, divorces, successions, etc.',
-            'price' => 500,
+            'price' => 500.00,
         ]);
 
         Pack::create([
             'name' => 'Consultation Spécialisée',
             'slug' => 'Visas, Recours & Formations',
             'description' => 'Assistance pour les démarches de visa, recours administratifs, formations juridiques, etc.',
-            'price' => 1500,
+            'price' => 1500.,
         ]);
+
         Pack::create([
             'name' => 'Consultation Avancée',
-            'slug' => 'consultation-avancee',
-            'description' => 
-                "Droit Fiscal : Problèmes d’impôts, régularisations fiscales... \n".
-                "Droit Foncier : Litiges immobiliers, titres fonciers...\n" .
-                "Droit Commercial : Contrats commerciaux, litiges entre entreprises...",
-            'price' => 1500,
+            'slug' => 'Droit Fiscal',
+            'description' => 'Problèmes d’impôts, régularisations fiscales, relations avec l’administration fiscale.',
+            'price' => 1500 DH,
         ]);
-        
-
-   
     }
 }

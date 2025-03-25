@@ -28,17 +28,12 @@ class PackSeeder extends Seeder
             'description' => 'Assistance pour les démarches de visa, recours administratifs, formations juridiques, etc.',
             'price' => 1500,
         ]);
+
         Pack::create([
             'name' => 'Consultation Avancée',
-            'slug' => 'consultation-avancee',
-            'description' => 
-                "Droit Fiscal : Problèmes d’impôts, régularisations fiscales... \n".
-                "Droit Foncier : Litiges immobiliers, titres fonciers...\n" .
-                "Droit Commercial : Contrats commerciaux, litiges entre entreprises...",
+            'slug' => 'Droit Fiscal & Foncier nr',
+            'description' => 'Problèmes d’impôts, régularisations fiscales, relations avec l’administration fiscale.',
             'price' => 1500,
         ]);
-        
-
-   
     }
 }

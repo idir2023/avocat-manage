@@ -32,9 +32,9 @@ class PackSeeder extends Seeder
             'name' => 'Consultation Avancée',
             'slug' => 'consultation-avancee',
             'description' => 
-                "Droit Fiscal : Problèmes d’impôts, régularisations fiscales... \n".
+                "Droit Fiscal : Problèmes d’impôts, régularisations fiscales...\n" .
                 "Droit Foncier : Litiges immobiliers, titres fonciers...\n" .
-                "Droit Commercial : Contrats commerciaux, litiges entre entreprises...",
+                "Droit Commercial : Contrats commerciaux, litiges entre entreprises, recouvrement de créances.",
             'price' => 1500,
         ]);
         

@@ -66,8 +66,7 @@
 
                 <!-- Slide 1 -->
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                    {{-- <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/carousel-1.jpg') }}" --}}
-                      <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/ll.jpg') }}"
+                    <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/carousel-1.jpg') }}"
                         style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3 text-center" style="max-width: 900px;">
@@ -402,92 +401,71 @@
     <!-- Action End -->
 
 
+
     <!-- Témoignages Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center pb-5">
-            <h6 class="text-uppercase text-primary">Témoignages</h6>
-            <h1 class="mb-5">Ce que disent nos clients</h1>
-        </div>
-
-        <div class="owl-carousel testimonial-carousel">
-
-            <!-- Témoignage 1 -->
-            <div class="testimonial-item">
-                <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2" style="min-height: 360px;">
-                    <p class="mb-4 testimonial-content" style="max-height: 150px; overflow: hidden;">
-                        "I asked this lawyer, Hanan Bounit, to help me with a problem I had with a company. She was professional, attentive and able to guide me effectively to resolve the situation. Thanks to his help, I was able to overcome this obstacle. Allah i3teha lkhir 🙏🏻"
-                    </p>
-                    <button class="btn btn-sm btn-light btn-read-more">Lire la suite</button>
-                    <h5 class="mb-1 text-white mt-3">NORA IDRISSI SAAD.</h5>
-                </div>
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center pb-5">
+                <h6 class="text-uppercase text-primary">Témoignages</h6>
+                <h1 class="mb-5">Ce que disent nos clients</h1>
             </div>
 
-            <!-- Témoignage 2 -->
-            <div class="testimonial-item">
-                <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2" style="min-height: 360px;">
-                    <p class="mb-4 testimonial-content" style="max-height: 150px; overflow: hidden;">
-                        "I found Maitre Hanan Bounit to be an excellent and informed lawyer in Agadir. Her English really surprised me, it was excellent and easy to understand. She really took the time to understand what we needed. She was well equipped to handle questions about international businesses and gave excellent advice. I am looking forward to continuing to work with her and have her guidance."
-                    </p>
-                    <button class="btn btn-sm btn-light btn-read-more">Lire la suite</button>
-                    <h5 class="mb-1 text-white mt-3">Stephanie Gross.</h5>
-                </div>
-            </div>
+            <div class="owl-carousel testimonial-carousel">
 
-            <!-- Témoignage 3 -->
-            <div class="testimonial-item">
-                <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2" style="min-height: 360px;">
-                    <p class="mb-4 testimonial-content" style="max-height: 150px; overflow: hidden;">
-                        "Exceptional Legal Service – Highly Recommended! I had the pleasure of working with Maitre Hanane Bounit, and I couldn’t be more satisfied with the service provided. From the very beginning, she demonstrated professionalism, expertise, and a genuine commitment to my case. She explained every step of the process, answered all my questions, and gave clear guidance. Thanks to her, my case was handled smoothly and successfully."
-                    </p>
-                    <button class="btn btn-sm btn-light btn-read-more">Lire la suite</button>
-                    <h5 class="mb-1 text-white mt-3">Hassan Tariq Chaudhry.</h5>
+                <!-- Témoignage 1 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2">
+                        <p class="mb-4">
+                            "Un accompagnement humain et professionnel dans mon dossier de licenciement. Me Bounit a su
+                            m'expliquer mes droits avec clarté."
+                            
+                        </p>
+                        <h5 class="mb-1 text-white">Yasmine L.</h5>
+                        <small class="text-light">Assistante RH</small>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Témoignage 4 -->
-            <div class="testimonial-item">
-                <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2" style="min-height: 360px;">
-                    <p class="mb-4 testimonial-content" style="max-height: 150px; overflow: hidden;">
-                        "A lawyer that I highly recommend! Human, attentive professionalism, and invested in her work. I won my case with her, and I can never thank her enough for her wise advice which greatly contributed to the result. Really great! 👌🏽"
-                    </p>
-                    <button class="btn btn-sm btn-light btn-read-more">Lire la suite</button>
-                    <h5 class="mb-1 text-white mt-3">Atlas Vitry94.</h5>
+                <!-- Témoignage 2 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2">
+                        <p class="mb-4">
+                            "Grâce au cabinet, j’ai pu résoudre un litige commercial complexe. Équipe à l’écoute et très
+                            réactive. Je recommande vivement."
+                        </p>
+                        <h5 class="mb-1 text-white">Karim D.</h5>
+                        <small class="text-light">Gérant de société</small>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Témoignage 5 -->
-            <div class="testimonial-item">
-                <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2" style="min-height: 360px;">
-                    <p class="mb-4 testimonial-content" style="max-height: 150px; overflow: hidden;">
-                        "I highly recommend Maître Hanane Bounit. She is a competent professional, attentive, and always available to answer my questions. Her human approach and her ability to explain things clearly reassured me throughout my process. Thanks to her expertise, my file was handled efficiently and successfully. I am very grateful for her support."
-                    </p>
-                    <button class="btn btn-sm btn-light btn-read-more">Lire la suite</button>
-                    <h5 class="mb-1 text-white mt-3">Mohamed BOULKARAKIR.</h5>
+                <!-- Témoignage 3 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2">
+                        <p class="mb-4">
+                            "Très satisfaite des conseils reçus pour la rédaction de mes contrats de travail. Une
+                            expertise précieuse et rassurante."
+                        </p>
+                        <h5 class="mb-1 text-white">Sara B.</h5>
+                        <small class="text-light">Entrepreneure</small>
+                    </div>
                 </div>
-            </div>
 
+                <!-- Témoignage 4 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-2">
+                        <p class="mb-4">
+                            "Le cabinet HB Avocats m’a accompagné dans une affaire familiale délicate avec beaucoup de
+                            tact et de professionnalisme."
+                        </p>
+                        <h5 class="mb-1 text-white">Hicham E.</h5>
+                        <small class="text-light">Cadre administratif</small>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
-<!-- Témoignages End -->
+    <!-- Témoignages End -->
 
-<!-- Read More JS -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll('.btn-read-more');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.previousElementSibling;
-                content.style.maxHeight = '100%';
-                content.style.overflow = 'visible';
-                button.style.display = 'none';
-            });
-        });
-    });
-</script>
-
-    
 
     <!-- Footer Start -->
     @include('clients.layouts.footer')
@@ -503,19 +481,3 @@
 </body>
 
 </html>
-<style>
-    .btn-read-more {
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: transparent;
-    transition: 0.3s;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 14px;
-}
-.btn-read-more:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-</style>

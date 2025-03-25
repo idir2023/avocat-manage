@@ -70,11 +70,8 @@ p {
         <div class="container py-2">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image.png') }}" alt="Cabinet Me Hanane Bounit">
+                    <img class="img-fluid rounded shadow" src="{{ asset('clients/img/about.jpg') }}" alt="Cabinet Me Hanane Bounit">
                 </div>
-                {{-- <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image1.png') }}" alt="Cabinet Me Hanane Bounit">
-                </div> --}}
                 <div class="col-lg-7">
                     <h6 class="text-primary text-uppercase mb-3">À propos de nous</h6>
                     <h2 class="mb-4 text-dark">Le Cabinet HB Avocats, à votre écoute à Agadir</h2>
@@ -87,7 +84,7 @@ p {
                         Basé à <strong>Agadir, Maroc</strong>, notre cabinet intervient en conseil et en contentieux, auprès des particuliers, professionnels, et PME. Notre approche multidisciplinaire nous permet de répondre efficacement à une grande diversité de problématiques juridiques.
                     </p>
                     <p class="text-muted mb-3">
-                        Quadrilingue <strong>Français, Anglais, Arabe et Tamazight</strong>, Maître Hanane Bounit s’appuie sur un parcours académique solide en droit social approfondi, droit des affaires, droit de l’entreprise et fiscale, droit civil et droit de la famille.
+                        Quadrilingue <strong>Français, Anglais, Arabe et Tamazight</strong>, Maître Hanane Bounit s’appuie sur un parcours académique solide en droit social approfondi, droit des affaires, droit de l’entreprise, droit civil et droit de la famille.
                     </p>
                     
 
@@ -100,7 +97,7 @@ p {
                     </p>
 
                     <p class="text-muted">
-                        Nous vous invitons à parcourir notre site pour découvrir notre domaine, nos services, et ce qui fait notre singularité dans le paysage juridique marocain.
+                        Nous vous invitons à parcourir notre site pour découvrir notre philosophie, nos services, et ce qui fait notre singularité dans le paysage juridique marocain.
                     </p>
                 </div>
             </div>

@@ -32,13 +32,18 @@ class PackSeeder extends Seeder
             'name' => 'Consultation Avancée',
             'slug' => 'consultation-avancee',
             'description' => 
-                "Droit Fiscal : Problèmes d’impôts, régularisations fiscales... \n".
-                "Droit Foncier : Litiges immobiliers, titres fonciers...\n" .
-                "Droit Commercial : Contrats commerciaux, litiges entre entreprises...",
+                "Droit Fiscal : Problèmes d’impôts, régularisations fiscales, contentieux fiscaux.\n" .
+                "Droit Foncier : Litiges immobiliers, titres fonciers, bornage, expropriation.\n" .
+                "Droit Commercial : Contrats commerciaux, litiges entre entreprises, recouvrement de créances.",
             'price' => 1500,
         ]);
         
 
-   
+        Pack::create([
+            'name' => 'Consultation Avancée',
+            'slug' => 'Droit Fiscal & Foncier & commercial ',
+            'description' => 'Problèmes d’impôts, régularisations fiscales, relations avec l’administration fiscale.',
+            'price' => 1500,
+        ]);
     }
 }

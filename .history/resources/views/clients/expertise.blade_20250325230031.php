@@ -421,19 +421,3 @@ $icones = [
 </body>
 
 </html>
-<style>
-    .btn-read-more {
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: transparent;
-    transition: 0.3s;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 14px;
-}
-.btn-read-more:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-</style>

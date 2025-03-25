@@ -144,7 +144,6 @@
                                 <p class="text-muted">{{ $pack->description }}</p>
                                 {{-- <h5 class="mb-3 fw-semibold">{{ $pack->price }} DH</h5> --}}
                                 @if (auth()->check())
-                                <h5 class="mb-3 fw-semibold">{{ $pack->price }} DH</h5>
                                     <a href="{{ route('formConsultation', $pack->id) }}"
                                         class="btn btn-outline mt-3">Demander ce pack</a>
                                 @else
