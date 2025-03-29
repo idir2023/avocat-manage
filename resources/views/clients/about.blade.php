@@ -11,38 +11,38 @@
 
     @include('clients.layouts.style')
 </head>
-<style>  
+<style>
+    body {
+        font-family: 'Lora', serif;
+        font-size: 18px;
+        /* line-height: 1.9; */
+        color: #333;
+    }
 
-body {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    /* line-height: 1.9; */
-    color: #333;
-}
+    h1.display-3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 52px;
+        /* légèrement plus grand */
+        color: #2c2c2c;
+    }
 
-h1.display-3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 52px; /* légèrement plus grand */
-    color: #2c2c2c;
-}
+    h2,
+    h3,
+    .display-3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 40px;
+        color: #3a3a3a;
+    }
 
-h2, h3, .display-3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 40px;
-    color: #3a3a3a;
-}
+    p {
+        font-size: 18px;
+        /* line-height: 2; */
 
-p {
-    font-size: 18px;
-    /* line-height: 2; */
- 
-}
-
-
+    }
 </style>
 
 <body>
@@ -51,7 +51,7 @@ p {
     <!-- Header End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid ation" style="margin-bottom: 90px;">
+    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px;">
                 <h3 class="display-3 text-white text-uppercase">Notre Histoire</h3>
@@ -70,7 +70,8 @@ p {
         <div class="container py-2">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image.png') }}" alt="Cabinet Me Hanane Bounit">
+                    <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image.png') }}"
+                        alt="Cabinet Me Hanane Bounit">
                 </div>
                 {{-- <div class="col-lg-5 mb-4 mb-lg-0">
                     <img class="img-fluid rounded shadow" src="{{ asset('clients/img/image1.png') }}" alt="Cabinet Me Hanane Bounit">
@@ -80,105 +81,123 @@ p {
                     <h2 class="mb-4 text-dark">Le Cabinet HB Avocats, à votre écoute à Agadir</h2>
 
                     <p class="text-muted mb-3">
-                        Chez <strong>Maître Hanane Bounit</strong>, nous nous engageons à fournir des conseils juridiques de la plus haute qualité, en plaçant vos besoins au cœur de notre démarche.
+                        Chez <strong>Maître Hanane Bounit</strong>, nous nous engageons à fournir des conseils
+                        juridiques de la plus haute qualité, en plaçant vos besoins au cœur de notre démarche.
                     </p>
 
                     <p class="text-muted mb-3">
-                        Basé à <strong>Agadir, Maroc</strong>, notre cabinet intervient en conseil et en contentieux, auprès des particuliers, professionnels, et PME. Notre approche multidisciplinaire nous permet de répondre efficacement à une grande diversité de problématiques juridiques.
+                        Basé à <strong>Agadir, Maroc</strong>, notre cabinet intervient en conseil et en contentieux,
+                        auprès des particuliers, professionnels, et PME. Notre approche multidisciplinaire nous permet
+                        de répondre efficacement à une grande diversité de problématiques juridiques.
                     </p>
                     <p class="text-muted mb-3">
-                        Quadrilingue <strong>Français, Anglais, Arabe et Tamazight</strong>, Maître Hanane Bounit s’appuie sur un parcours académique solide en droit social approfondi, droit des affaires, droit Administratif et fiscale, droit civil et droit de la famille.
+                        Quadrilingue <strong>Français, Anglais, Arabe et Tamazight</strong>, Maître Hanane Bounit
+                        s’appuie sur un parcours académique solide en droit social approfondi, droit des affaires, droit
+                        Administratif et fiscale, droit civil et droit de la famille.
                     </p>
-                    
+
 
                     <p class="text-muted mb-3">
-                        Forte d'une expérience en entreprise, Maître Bounit offre un accompagnement pragmatique pour la maîtrise des risques juridiques, dans le respect des réalités humaines et économiques de chaque client.
+                        Forte d'une expérience en entreprise, Maître Bounit offre un accompagnement pragmatique pour la
+                        maîtrise des risques juridiques, dans le respect des réalités humaines et économiques de chaque
+                        client.
                     </p>
 
                     <p class="text-muted mb-3">
-                        Le cabinet agit dans le strict respect du <strong>secret professionnel</strong> et d’une <strong>déontologie rigoureuse</strong>, garantissant indépendance, confidentialité, et intégrité.
+                        Le cabinet agit dans le strict respect du <strong>secret professionnel</strong> et d’une
+                        <strong>déontologie rigoureuse</strong>, garantissant indépendance, confidentialité, et
+                        intégrité.
                     </p>
 
                     <p class="text-muted">
-                        Nous vous invitons à parcourir notre site pour découvrir notre domaine, nos services, et ce qui fait notre singularité dans le paysage juridique marocain.
+                        Nous vous invitons à parcourir notre site pour découvrir notre domaine, nos services, et ce qui
+                        fait notre singularité dans le paysage juridique marocain.
                     </p>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
- 
 
-<!-- Pourquoi nous choisir Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="row">
-            <!-- Image -->
-            <div class="col-lg-6" style="min-height: 500px;">
-                <div class="position-relative h-100 rounded overflow-hidden">
-                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/acc.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
+
+    <!-- Pourquoi nous choisir Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Image -->
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100 rounded overflow-hidden">
+                        <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/acc.jpg') }}"
+                            style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
+                    </div>
                 </div>
-            </div>
 
-            <!-- Contenu -->
-            <div class="col-lg-6 pt-5 pb-lg-5">
-                <div class="feature-text bg-white rounded shadow p-lg-5">
-                    <h6 class="text-primary text-uppercase mb-3">Nos Atouts</h6>
-                    <h2 class="mb-4 text-dark">Pourquoi choisir notre cabinet</h2>
+                <!-- Contenu -->
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="feature-text bg-white rounded shadow p-lg-5">
+                        <h6 class="text-primary text-uppercase mb-3">Nos Atouts</h6>
+                        <h2 class="mb-4 text-dark">Pourquoi choisir notre cabinet</h2>
 
-                    <!-- Point 1 -->
-                    <div class="d-flex mb-4">
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">01</h5>
+                        <!-- Point 1 -->
+                        <div class="d-flex mb-4">
+                            <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center"
+                                style="border-radius: 50px;">
+                                <h5 class="text-white m-0">01</h5>
+                            </div>
+                            <div class="ml-4">
+                                <h5>Expertise juridique approfondie</h5>
+                                <p class="m-0">Nous mettons à votre disposition une expertise solide dans divers
+                                    domaines du droit, avec une approche rigoureuse et personnalisée.</p>
+                            </div>
                         </div>
-                        <div class="ml-4">
-                            <h5>Expertise juridique approfondie</h5>
-                            <p class="m-0">Nous mettons à votre disposition une expertise solide dans divers domaines du droit, avec une approche rigoureuse et personnalisée.</p>
+
+                        <!-- Point 2 -->
+                        <div class="d-flex mb-4">
+                            <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center"
+                                style="border-radius: 50px;">
+                                <h5 class="text-white m-0">02</h5>
+                            </div>
+                            <div class="ml-4">
+                                <h5>Écoute, confiance et réactivité</h5>
+                                <p class="m-0">Nous plaçons la relation client au cœur de notre mission, avec une
+                                    disponibilité constante et une confidentialité garantie.</p>
+                            </div>
                         </div>
+
+                        <!-- Point 3 -->
+                        <div class="d-flex">
+                            <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center"
+                                style="border-radius: 50px;">
+                                <h5 class="text-white m-0">03</h5>
+                            </div>
+                            <div class="ml-4">
+                                <h5>Accompagnement rigoureux et personnalisé</h5>
+                                <p class="m-0">Nous mettons en place une stratégie juridique claire et adaptée à
+                                    votre situation, avec un suivi attentif à chaque étape.</p>
+                            </div>
+                        </div>
+
+
                     </div>
-
-                    <!-- Point 2 -->
-                    <div class="d-flex mb-4">
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">02</h5>
-                        </div>
-                        <div class="ml-4">
-                            <h5>Écoute, confiance et réactivité</h5>
-                            <p class="m-0">Nous plaçons la relation client au cœur de notre mission, avec une disponibilité constante et une confidentialité garantie.</p>
-                        </div>
-                    </div>
-
-                    <!-- Point 3 -->
-                    <div class="d-flex"> 
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">03</h5>
-                        </div>
-                        <div class="ml-4">
-                            <h5>Accompagnement rigoureux et personnalisé</h5>
-                            <p class="m-0">Nous mettons en place une stratégie juridique claire et adaptée à votre situation, avec un suivi attentif à chaque étape.</p>
-                        </div>
-                    </div>
-                    
-
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Pourquoi nous choisir End -->
+    <!-- Pourquoi nous choisir End -->
 
     <!-- Features End -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="bg-action rounded d-flex align-items-center justify-content-center" style="height: 500px;">
                 <div class="col-lg-8 text-center">
-                    <h1 class="text-white mb-4">Besoin d’un conseil ? Contactez-nous dès maintenant pour une consultation </h1>
+                    <h1 class="text-white mb-4">Besoin d’un conseil ? Contactez-nous dès maintenant pour une
+                        consultation </h1>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('contact') }}">Nous contacter</a>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
 
     <!-- Footer Start -->
@@ -192,7 +211,7 @@ p {
 
     <!-- JavaScript Libraries -->
     @include('clients.layouts.scripts')
-     
+
 </body>
 
 </html>
