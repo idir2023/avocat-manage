@@ -34,7 +34,7 @@
         color: #3a3a3a;
     }
     p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     </style>

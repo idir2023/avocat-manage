@@ -68,7 +68,7 @@
     }
 
     h6.text-uppercase {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         color: #5a4c1d !important;
     }
@@ -79,20 +79,27 @@
     }
 
     .card-body h4 {
-        font-size: 24px;
+        font-size: 26px;
         font-weight: bold;
-        color: #5a4c1d;
+        color: #764929;
     }
 
     .card-body h5 {
-        font-size: 20px;
-        color: #444;
+        font-size: 24px;
+        color: #704526FF;
     }
+
+
 
     .text-muted {
         font-size: 16px;
         color: #666 !important;
     }
+    .pack-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
 </style>
 
 <body>
@@ -136,14 +143,21 @@
             <div class="row justify-content-center">
                 <!-- Loop through packs -->
                 @foreach ($packs as $pack)
-                    <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-md-12 col-lg-6 mb-4">
+
+                    {{-- <div class="col-md-6 col-lg-4 mb-4"> --}}
                         <div class="card border-0 shadow-lg h-100 text-center p-4 pack-card hover-shadow">
                             <div class="card-body">
                                 <h4 class="mb-3">{{ $pack->name }}</h4>
                                 <h5 class="mb-3 fw-semibold">{{ $pack->slug }}</h5>
-                                <p class="text-muted">{{ $pack->description }}</p>
+                                <p class="pack-description text-muted text-justify mt-3">
+                                    {!! nl2br(e($pack->description)) !!}
+                                </p>
+                                
+                                {{-- <p class="text-muted">{{ $pack->description }}</p> --}}
                                 {{-- <h5 class="mb-3 fw-semibold">{{ $pack->price }} DH</h5> --}}
                                 @if (auth()->check())
+                                <h5 class="mb-3 fw-semibold">{{ $pack->price }} DH</h5>
                                     <a href="{{ route('formConsultation', $pack->id) }}"
                                         class="btn btn-outline mt-3">Demander ce pack</a>
                                 @else
@@ -162,7 +176,10 @@
     <!-- Contact Section Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
-            <div class="bg-action rounded d-flex align-items-center justify-content-center" style="height: 500px;">
+       
+    
+            {{-- <div class="bg-action rounded d-flex align-items-center justify-content-center" style="height: 500px;"> --}}
+            
                 <div class="col-lg-8 text-center">
                     <h1 class="text-white mb-4">Besoin d’un conseil ? Contactez-nous dès maintenant pour une
                         consultation</h1>

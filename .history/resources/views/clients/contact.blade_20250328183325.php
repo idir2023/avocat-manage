@@ -160,7 +160,6 @@ p {
                     </div>
                 </div>
             </div>
-            
 
         </div>
     </div>
@@ -172,7 +171,7 @@ p {
             <!-- Image -->
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100 rounded overflow-hidden">
-                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/acc.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
+                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/feature.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
                 </div>
             </div>
 
@@ -205,15 +204,15 @@ p {
                     </div>
 
                     <div class="d-flex"> 
-                        <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
-                            <h5 class="text-white m-0">03</h5>
+                            <div class="btn-primary btn-lg-square px-3 d-flex align-items-center justify-content-center" style="border-radius: 50px;">
+                                <h5 class="text-white m-0">03</h5>
+                            </div>
+                            <div class="ml-4">
+                                <h5>Accompagnement rigoureux et personnalisé</h5>
+                                <p class="m-0">Nous mettons en place une stratégie juridique claire et adaptée à votre situation, avec un suivi attentif à chaque étape.</p>
+                            </div>
                         </div>
-                        <div class="ml-4">
-                            <h5>Accompagnement rigoureux et personnalisé</h5>
-                            <p class="m-0">Nous mettons en place une stratégie juridique claire et adaptée à votre situation, avec un suivi attentif à chaque étape.</p>
-                        </div>
-                    </div>
-                    
+                        
 
                 </div>
             </div>

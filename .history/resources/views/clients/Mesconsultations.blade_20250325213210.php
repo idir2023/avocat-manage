@@ -38,7 +38,7 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .pack-card {

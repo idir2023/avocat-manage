@@ -160,7 +160,6 @@ p {
                     </div>
                 </div>
             </div>
-            
 
         </div>
     </div>
@@ -172,7 +171,7 @@ p {
             <!-- Image -->
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100 rounded overflow-hidden">
-                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/acc.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
+                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/feature.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
                 </div>
             </div>
 
@@ -213,7 +212,8 @@ p {
                             <p class="m-0">Nous mettons en place une stratégie juridique claire et adaptée à votre situation, avec un suivi attentif à chaque étape.</p>
                         </div>
                     </div>
-                    
+                    <img class="position-absolute w-20 h-30" src="{{ asset('clients/img/img2.jpg') }}"
+                    style="object-fit: cover;">
 
                 </div>
             </div>

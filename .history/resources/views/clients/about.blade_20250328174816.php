@@ -87,7 +87,7 @@ p {
                         Basé à <strong>Agadir, Maroc</strong>, notre cabinet intervient en conseil et en contentieux, auprès des particuliers, professionnels, et PME. Notre approche multidisciplinaire nous permet de répondre efficacement à une grande diversité de problématiques juridiques.
                     </p>
                     <p class="text-muted mb-3">
-                        Quadrilingue <strong>Français, Anglais, Arabe et Tamazight</strong>, Maître Hanane Bounit s’appuie sur un parcours académique solide en droit social approfondi, droit des affaires, droit Administratif et fiscale, droit civil et droit de la famille.
+                        Quadrilingue <strong>Français, Anglais, Arabe et Tamazight</strong>, Maître Hanane Bounit s’appuie sur un parcours académique solide en droit social approfondi, droit des affaires, droit de l’entreprise et fiscale, droit civil et droit de la famille.
                     </p>
                     
 
@@ -116,7 +116,7 @@ p {
             <!-- Image -->
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100 rounded overflow-hidden">
-                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/acc.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
+                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/feature.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
                 </div>
             </div>
 

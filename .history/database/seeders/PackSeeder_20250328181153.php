@@ -20,8 +20,8 @@ class PackSeeder extends Seeder
             'name' => 'Consultation Générale',
             'slug' => 'Droit du Travail & Droit de la Famille',
             'description' => "Ce pack couvre les besoins courants en matière de droit du travail et de droit de la famille :\n
-        • Droit du Travail : Assistance en cas de licenciement abusif, non-paiement des salaires, harcèlement au travail, rédaction ou relecture de contrats de travail.\n
-        • Droit de la Famille : Conseils et accompagnement en cas de divorce, garde d’enfants, pension alimentaire et conflits familiaux.\n
+        • Droit du Travail : Assistance en cas de licenciement abusif, non-paiement des salaires, harcèlement au travail, rédaction ou relecture de contrats de travail, départs négociés ou contentieux avec l’employeur.\n
+        • Droit de la Famille : Conseils et accompagnement en cas de divorce, garde d’enfants, pension alimentaire, filiation, successions, et conflits familiaux.\n
         Notre cabinet vous aide à comprendre vos droits, à préparer vos démarches juridiques et à protéger vos intérêts dans ces situations souvent sensibles et personnelles.",
             'price' => 500,
         ]);
@@ -38,7 +38,7 @@ class PackSeeder extends Seeder
             'name' => 'Consultation Avancée',
             'slug' => 'consultation-avancee',
             'description' => "Ce pack s’adresse aux clients ayant des problématiques juridiques complexes nécessitant une expertise approfondie :\n
-        • Droit Fiscal : Optimisation fiscale, contentieux fiscaux, régularisation et  contrôle .\n
+        • Droit Fiscal : Optimisation fiscale, contentieux fiscaux, régularisation, contrôle .\n
         • Droit Foncier : Litiges relatifs à la propriété, aux titres fonciers, aux conflits de voisinage ou d'héritage foncier.\n
         • Droit Commercial : Accompagnement dans la rédaction et l’analyse de contrats commerciaux, règlement de litiges entre entreprises, procédures collectives.\n
         Un accompagnement personnalisé et stratégique est assuré pour chaque domaine abordé.",

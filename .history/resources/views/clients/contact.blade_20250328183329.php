@@ -172,7 +172,7 @@ p {
             <!-- Image -->
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100 rounded overflow-hidden">
-                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/acc.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
+                    <img class="position-absolute w-100 h-100" src="{{asset('clients/img/feature.jpg')}}" style="object-fit: cover;" alt="Pourquoi choisir notre cabinet">
                 </div>
             </div>
 

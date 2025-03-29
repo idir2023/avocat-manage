@@ -136,6 +136,8 @@
             <div class="row justify-content-center">
                 <!-- Loop through packs -->
                 @foreach ($packs as $pack)
+                <div class="col-md-12 col-lg-6 mb-4">
+
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card border-0 shadow-lg h-100 text-center p-4 pack-card hover-shadow">
                             <div class="card-body">
@@ -144,6 +146,7 @@
                                 <p class="text-muted">{{ $pack->description }}</p>
                                 {{-- <h5 class="mb-3 fw-semibold">{{ $pack->price }} DH</h5> --}}
                                 @if (auth()->check())
+                                <h5 class="mb-3 fw-semibold">{{ $pack->price }} DH</h5>
                                     <a href="{{ route('formConsultation', $pack->id) }}"
                                         class="btn btn-outline mt-3">Demander ce pack</a>
                                 @else
