@@ -12,7 +12,9 @@ $settings = \App\Models\Parametre::first();
         <div class="col-lg-9">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
                 <a href="{{ route('home') }}" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0 display-4 text-primary text-uppercase">HB AVOCAT</h1>
+                    {{-- <h1 class="m-0 display-4 text-primary text-uppercase">HB AVOCAT</h1> --}}
+                    <img width="100" src="{{ asset('clients/img/logo.png') }}" alt="">
+
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
