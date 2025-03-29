@@ -51,7 +51,7 @@ p {
     <!-- Header End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
+    <div class="container-fluid ation" style="margin-bottom: 90px;">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px;">
                 <h3 class="display-3 text-white text-uppercase">Notre Histoire</h3>
