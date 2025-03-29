@@ -4,19 +4,9 @@ $settings = \App\Models\Parametre::first();
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 bg-secondary d-none d-lg-block">
-            <a href="{{ route('home') }}"
-                class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-             
-         
-                <h1 
-                    class="m-0 text-4xl font-extrabold text-primary text-uppercase leading-tight text-center shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
-                    <span
-                        class="text-6xl text-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 rounded-lg">HB</span>
-                   
-                </h1>
-
-
-            </a>
+            <a href="{{route('home')}}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <img width="100" src="{{asset('clients/img/logo.png')}}" alt="">
+                 </a>
         </div>
         <div class="col-lg-9">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
