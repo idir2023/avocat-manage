@@ -10,6 +10,8 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('clients/img/hb.jpeg') }}">
     <!-- Favicon -->
     @include('clients.layouts.style')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <style>
     body {
