@@ -69,7 +69,7 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
                     {{-- <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/carousel-1.jpg') }}" --}}
-                    <img class="position-absolute w-100 h-100" src="{{ asset('clients/acceuil_new.jpg') }}"
+                    <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/acceuil_new.jpg') }}"
                         style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3 text-center" style="max-width: 900px;">
@@ -84,7 +84,7 @@
 
                 <!-- Slide 2 -->
                 <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="{{ asset('clients/acceuil_new.jpg') }}"
+                    <img class="position-absolute w-100 h-100" src="{{ asset('clients/img/acceuil_new.jpg') }}"
                         style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3 text-center" style="max-width: 900px;">
