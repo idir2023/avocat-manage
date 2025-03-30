@@ -16,9 +16,9 @@ class ParametreSeeder extends Seeder
         DB::table('parametres')->insert([
             'nom' => 'Bounit',
             'prenom' => 'hanane',
-            'localisation' => 'Agadir-maroc',
+            'localisation' => 'Bureau N°4 , au 2éme étage immeuble lilou -Haut Founty ,Agadir',
             'email' => 'Cabinetbounit.avocat@gmail.com',
-            'telephone' => '0621309024',
+            'telephone' => '+212528281710',
             'instagram' => '@johndoe',
             'linkedin' => 'https://linkedin.com/in/johndoe',
             'facebook' => 'https://facebook.com/johndoe',
