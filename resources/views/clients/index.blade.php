@@ -67,47 +67,43 @@
             <div class="carousel-inner">
 
                 <!-- Slide 1 -->
-                <div class="carousel-item position-relative active">
+                <div class="carousel-item position-relative active container-fluid bg-page-header">
 
-                    <div class="container-fluid bg-page-header">
-                        <div class="container">
-                            <div class="d-flex flex-column align-items-center justify-content-center"
-                                style="min-height: 400px;">
-                                <h4 class="display-3 text-white text-uppercase">Accueil</h4>
-                                <div class="p-3 text-center" style="max-width: 900px;">
-                                    <p class="m-0 text-uppercase">
-                                        <a class="text-white" href="/">Cabinet HB Avocats</a>
-                                    </p>
-                                    <h3 class="display-4 text-white mb-4">Parce que chaque affaire mérite une attention
-                                        particulière</h3>
-                                    <a class="btn btn-primary py-3 px-5 mt-2"
-                                        href="{{ route('contact') }}">Contactez-nous</a>
-                                </div>
+                    <div class="container">
+                        <div class="d-flex flex-column align-items-center justify-content-center"
+                            style="min-height: 400px;">
+
+                            <h3 class="display-3 text-white text-center text-uppercase">Accueil</h3>
+                            <div class="p-3 text-center" style="max-width: 900px;">
+                                <p class="m-0 text-uppercase">
+                                    <a class="text-white" href="/">Cabinet HB Avocats</a>
+                                </p>
+                                <h4 class="display-4 text-white mb-4">Parce que chaque affaire mérite une attention
+                                    particulière</h4>
+                                <a class="btn btn-primary py-3 px-5 mt-2"
+                                    href="{{ route('contact') }}">Contactez-nous</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
                 <!-- Slide 2 -->
-                <div class="carousel-item position-relative">
+                <div class="carousel-item position-relative container-fluid bg-page-header">
 
-                    <div class="container-fluid bg-page-header">
-                        <div class="container">
-                            <div class="d-flex flex-column align-items-center justify-content-center"
-                                style="min-height: 400px;">
-                                <h4 class="display-3 text-white text-uppercase">Écoute & Engagement</h4>
-                                <div class="p-3 text-center" style="max-width: 900px;">
-                                    <p class="m-0 text-uppercase">
-                                        <a class="text-white" href="/">Cabinet HB Avocats</a>
-                                    </p>
-                                    <h3 class="display-4 text-white mb-4">Un accompagnement juridique humain, efficace
-                                        et
-                                        rigoureux</h3>
-                                    <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('cons') }}">Demander une
-                                        Consultation</a>
-                                </div>
+                    <div class="container">
+                        <div class="d-flex flex-column align-items-center justify-content-center"
+                            style="min-height: 400px;">
+
+                            <h3 class="display-3 text-white text-center text-uppercase">Écoute & Engagement</h3>
+                            <div class="p-3 text-center" style="max-width: 900px;">
+                                <p class="m-0 text-uppercase">
+                                    <a class="text-white" href="/">Cabinet HB Avocats</a>
+                                </p>
+                                <h4 class="display-4 text-white mb-4">Un accompagnement juridique humain, efficace
+                                    et
+                                    rigoureux</h4>
+                                <a class="btn btn-primary py-3 px-5 mt-2" href="{{ route('cons') }}">Demander une
+                                    Consultation</a>
                             </div>
                         </div>
                     </div>
