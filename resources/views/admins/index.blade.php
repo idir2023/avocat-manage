@@ -38,7 +38,7 @@
         <!-- Column -->
         <div class="col-md-6 col-lg-4">
             <div class="card card-hover">
-                <div class="box bg-purple text-center">
+                <div class="box bg-warning text-center">
                     <h1 class="font-light text-white"><i class="mdi mdi-certificate"></i></h1>
                     <h6 class="text-white">Expertises</h6>
                     <div class="text-white">{{ $totalExpertise ?? 0 }} total</div>
