@@ -9,6 +9,7 @@ use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\ExpertiseController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PackController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
@@ -46,8 +47,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
                 'expertises' => ExpertiseController::class,
                 'actualites' => ActualiteController::class,
                 'contacts' => ContactController::class,
+                'packs' => PackController::class
             ]);
-
+ 
             // Gestion des utilisateurs
             Route::prefix('users')->name('users.')->group(function () {
                 Route::get('/manage', [ProfileController::class, 'User'])->name('manage');

@@ -117,4 +117,19 @@ return [
     'logout' => 'Logout',
     'view_profile' => 'View Profile',
 
+    'packs' => 'Packs',
+    'manage_packs' => 'Manage Packs',
+    'add_new_pack' => 'Add New Pack',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'name' => 'Name',
+    'slug' => 'Slug',
+    'description' => 'Description',
+    'price' => 'Price',
+    'actions' => 'Actions',
+    'save' => 'Save',
+    'close' => 'Close',
+    'are_you_sure' => 'Are you sure?',
+    'edit_pack' => 'Edit Pack',
+
 ];

@@ -44,6 +44,15 @@
                             <span class="hide-menu">{{ __('messages.contacts') }}</span>
                         </a>
                     </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="{{ route('packs.index') }}" aria-expanded="false">
+                            <i class="mdi mdi-package"></i>
+                            <span class="hide-menu">{{ __('messages.packs') }}</span>
+                        </a>
+                    </li>
+
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{ route('parametres.index') }}" aria-expanded="false">
